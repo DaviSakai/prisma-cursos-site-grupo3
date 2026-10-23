@@ -54,15 +54,33 @@ A Prisma Cursos não possuía presença digital estruturada, o que limitava a ca
 
 ## Estrutura do repositório
 
-```text
+```
 prisma-cursos-site/
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   ├── img/
-│   └── icons/
+├── README.md
 ├── .gitignore
-└── README.md
+├── css/
+│   ├── variables.css
+│   └── global.css
+├── js/
+│   └── main.js
+├── assets/
+│   ├── images/
+│   └── icons/
+└── pages/
+```
+
+Cada seção pode ter seu próprio arquivo em `css/`, importado no `index.html`.
+
+---
+
+## Como rodar localmente
+
+1. Clone o repositório:
+   ```
+   git clone https://github.com/DaviSakai/prisma-cursos-site-grupo3.git
+   ```
+2. Abra a pasta no VS Code.
+3. Abra o `index.html` no navegador, ou use a extensão **Live Server** (botão direito no `index.html` → *Open with Live Server*).
+
+O projeto usa só HTML, CSS e JavaScript, então não precisa instalar nada.
