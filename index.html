@@ -12,11 +12,98 @@
     <link rel="stylesheet" href="css/components/typography.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/hero.css">
 </head>
 <body>
     <header></header>
     <main>
-        <section id="inicio"></section>
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="container hero__container">
+                <div class="hero__main">
+                    <div class="hero__content">
+                        <h1 id="hero-title" class="hero__title heading-hero">Seu futuro começa aqui!</h1>
+                        <p class="hero__description text-body">
+                            Mais do que um instituto de educação, a Prisma Cursos é a sua ponte direta para o mercado. Qualificação rápida, formato híbrido e foco 100% no que as empresas realmente procuram.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#cursos" class="btn btn--primary hero__cta">Conheça os cursos</a>
+                        </div>
+                    </div>
+
+                    <div class="hero__media">
+                        <img
+                            src="assets/images/hero-ilustracao.jpg"
+                            alt="Destaques da Prisma Cursos: 6 formações de alta qualidade, metodologia híbrida, foco 100% no mercado e projetos reais"
+                            width="840"
+                            height="670"
+                            class="hero__image"
+                        >
+                    </div>
+                </div>
+
+                <div class="hero__partners" aria-labelledby="hero-partners-title">
+                    <h2 id="hero-partners-title" class="hero__partners-title">Nossos parceiros</h2>
+                    <div class="hero__partners-bar">
+                        <ul class="hero__partners-list" role="list">
+                            <li class="hero__partners-item">
+                                <img
+                                    src="assets/images/parceiro-techcore.png"
+                                    alt="TechCore Solutions"
+                                    width="320"
+                                    height="106"
+                                    class="hero__partners-logo"
+                                >
+                            </li>
+                            <li class="hero__partners-item">
+                                <img
+                                    src="assets/images/parceiro-studio-aurora.png"
+                                    alt="Studio Aurora"
+                                    width="320"
+                                    height="107"
+                                    class="hero__partners-logo"
+                                >
+                            </li>
+                            <li class="hero__partners-item">
+                                <img
+                                    src="assets/images/parceiro-elevate.png"
+                                    alt="Elevate Partners"
+                                    width="147"
+                                    height="140"
+                                    class="hero__partners-logo hero__partners-logo--tall"
+                                >
+                            </li>
+                            <li class="hero__partners-item">
+                                <img
+                                    src="assets/images/parceiro-nexus.png"
+                                    alt="Nexus Consultoria"
+                                    width="320"
+                                    height="117"
+                                    class="hero__partners-logo"
+                                >
+                            </li>
+                            <li class="hero__partners-item">
+                                <img
+                                    src="assets/images/parceiro-pixelhouse.png"
+                                    alt="PixelHouse"
+                                    width="244"
+                                    height="140"
+                                    class="hero__partners-logo hero__partners-logo--tall"
+                                >
+                            </li>
+                            <li class="hero__partners-item">
+                                <img
+                                    src="assets/images/parceiro-codewave.png"
+                                    alt="CodeWave"
+                                    width="230"
+                                    height="140"
+                                    class="hero__partners-logo hero__partners-logo--tall"
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="sobre-nos"></section>
         <section id="cursos"></section>
         <section id="depoimentos"></section>
