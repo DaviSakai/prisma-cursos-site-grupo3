@@ -1,0 +1,190 @@
+/* ==========================================================================
+   PRISMA CURSOS — CARDS E BADGES COMPARTILHADOS (css/components/cards.css)
+   Referência: Issue #2 — Cards de cursos, depoimentos e destaques no Figma
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CARD BASE (.card)
+   Estrutura flexível que não impõe marcação rígida às próximas seções
+   -------------------------------------------------------------------------- */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.card--interactive:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Sub-elementos opcionais para organização interna de cards */
+.card__media {
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--color-background);
+}
+
+.card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    flex: 1;
+}
+
+.card__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-snug);
+    color: inherit;
+}
+
+.card__description {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    color: inherit;
+    opacity: 0.92;
+}
+
+.card__footer {
+    display: flex;
+     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: auto;
+    padding-top: var(--space-2);
+}
+
+/* --------------------------------------------------------------------------
+   2. VARIANTES CROMÁTICAS DO PRISMA (Cards de Cursos confirmados no Figma)
+   Cores Refratadas pelo Prisma: #B80004, #F18D1A, #C6BF00, #00B454, #017BF6, #9146FC
+   -------------------------------------------------------------------------- */
+.card--prism-red {
+    background-color: var(--color-prism-red);
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+.card--prism-orange {
+    background-color: var(--color-prism-orange);
+    color: var(--color-text-inverse);
+    border-color: transparent;
+}
+
+.card--prism-yellow {
+    background-color: var(--color-prism-yellow);
+    color: var(--color-text-inverse);
+    border-color: transparent;
+}
+
+.card--prism-green {
+    background-color: var(--color-prism-green);
+    color: var(--color-text-inverse);
+    border-color: transparent;
+}
+
+.card--prism-blue {
+    background-color: var(--color-prism-blue);
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+.card--prism-purple {
+    background-color: var(--color-prism-purple);
+    color: var(--color-white);
+    border-color: transparent;
+}
+
+/* Garantir que títulos e parágrafos herdem o contraste correto nas variantes coloridas */
+.card--prism-red h1, .card--prism-red h2, .card--prism-red h3, .card--prism-red h4, .card--prism-red p,
+.card--prism-blue h1, .card--prism-blue h2, .card--prism-blue h3, .card--prism-blue h4, .card--prism-blue p,
+.card--prism-purple h1, .card--prism-purple h2, .card--prism-purple h3, .card--prism-purple h4, .card--prism-purple p {
+    color: var(--color-white);
+}
+
+.card--prism-orange h1, .card--prism-orange h2, .card--prism-orange h3, .card--prism-orange h4, .card--prism-orange p,
+.card--prism-yellow h1, .card--prism-yellow h2, .card--prism-yellow h3, .card--prism-yellow h4, .card--prism-yellow p,
+.card--prism-green h1, .card--prism-green h2, .card--prism-green h3, .card--prism-green h4, .card--prism-green p {
+    color: var(--color-text-inverse);
+}
+
+/* --------------------------------------------------------------------------
+   3. VARIANTES INSTITUCIONAIS (Destaques Hero, Valores e Depoimentos)
+   -------------------------------------------------------------------------- */
+/* Caixas informativas azuis do Hero ("Ensino Híbrido", "Foco no Mercado", "Para Todos") */
+.card--info {
+    background-color: var(--color-surface-info);
+    color: var(--color-white);
+    border-color: var(--color-border-primary);
+    text-align: center;
+    align-items: center;
+}
+
+/* Cards de superfície elevada (ex.: Depoimentos no Figma) */
+.card--elevated {
+    background-color: var(--color-surface-muted);
+    color: var(--color-white);
+    border-color: var(--color-border);
+}
+
+/* Cards em formato pílula horizontal (ex.: "Nossos Valores" no Figma) */
+.card--pill {
+    border-radius: var(--radius-full);
+    padding: var(--space-4) var(--space-8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   4. BADGES / TAGS DE CATEGORIA E MODALIDADE (ex.: "Tecnologia", "Híbrido")
+   -------------------------------------------------------------------------- */
+.badge-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-surface);
+    color: var(--color-white);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.badge--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}

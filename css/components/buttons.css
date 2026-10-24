@@ -1,0 +1,139 @@
+/* ==========================================================================
+   PRISMA CURSOS — BOTÕES COMPARTILHADOS (css/components/buttons.css)
+   Referência: Issue #2 — Botões em pílula confirmados no protótipo Figma
+   Suporta tanto <button> quanto <a> com a classe .btn
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 0.75rem 1.75rem;
+    border: var(--border-width-thick) solid transparent;
+    border-radius: var(--radius-full);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+/* Permite quebra de linha controlada em telas muito estreitas (< 360px) */
+@media (max-width: 380px) {
+    .btn {
+        white-space: normal;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   1. VARIANTE PRIMÁRIA (.btn--primary)
+   Fundo #13AEF9 e texto escuro #000000 conforme CTAs do Figma ("Conheça os cursos",
+   "Conheça nossa história", "Inscreva-se"). Contraste WCAG AAA (8.59:1).
+   -------------------------------------------------------------------------- */
+.btn--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+.btn--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--color-primary-hover);
+    color: var(--color-text-inverse);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+.btn--primary:active:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--color-primary-active);
+    color: var(--color-text-inverse);
+    transform: translateY(1px);
+}
+
+/* --------------------------------------------------------------------------
+   2. VARIANTE SECUNDÁRIA (.btn--secondary)
+   Fundo #262626 e texto #FFFFFF conforme botão "Veja os detalhes" nos cards
+   de cursos do Figma. Contraste WCAG AAA (15.1:1).
+   -------------------------------------------------------------------------- */
+.btn--secondary {
+    background-color: var(--color-surface);
+    color: var(--color-white);
+    border-color: var(--color-border-strong);
+}
+
+.btn--secondary:hover:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--color-secondary-hover);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.btn--secondary:active:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--color-secondary-active);
+    color: var(--color-white);
+    transform: translateY(1px);
+}
+
+/* --------------------------------------------------------------------------
+   3. VARIANTE CONTORNO (.btn--outline)
+   Opção complementar discreta para ações secundárias sobre fundos escuros
+   -------------------------------------------------------------------------- */
+.btn--outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn--outline:hover:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--color-surface-primary-subtle);
+    color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+}
+
+.btn--outline:active:not(:disabled):not([aria-disabled="true"]) {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverse);
+    transform: translateY(1px);
+}
+
+/* --------------------------------------------------------------------------
+   4. MODIFICADORES DE TAMANHO E LARGURA
+   -------------------------------------------------------------------------- */
+.btn--sm {
+    padding: 0.5rem 1.125rem;
+    font-size: var(--font-size-sm);
+}
+
+.btn--lg {
+    padding: 0.9375rem 2.25rem;
+    font-size: var(--font-size-md);
+}
+
+.btn--full {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   5. ESTADOS DE FOCO E DESABILITADO
+   -------------------------------------------------------------------------- */
+.btn:focus-visible {
+    outline: var(--border-width-thick) solid var(--color-white);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 5px var(--color-focus-ring);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+    opacity: 0.48;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    transform: none;
+}
