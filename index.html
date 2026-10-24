@@ -12,10 +12,29 @@
     <link rel="stylesheet" href="css/components/typography.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/hero.css">
 </head>
 <body>
-    <header></header>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegação principal">
+            <div class="navbar__symbol">
+                <img src="assets/images/logo-prisma-simbolo.svg" alt="" width="136" height="52">
+            </div>
+            <div class="navbar__menu">
+                <a href="#inicio" class="navbar__logo">
+                    <img src="assets/images/logo-prisma-texto.svg" alt="Prisma Cursos" width="120" height="44">
+                </a>
+                <ul class="navbar__links">
+                    <li><a href="#inicio" class="navbar__link">Início</a></li>
+                    <li><a href="#sobre-nos" class="navbar__link">Sobre nós</a></li>
+                    <li><a href="#cursos" class="navbar__link">Cursos</a></li>
+                    <li><a href="#depoimentos" class="navbar__link">Depoimentos</a></li>
+                    <li><a href="#contato" class="navbar__link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>        
+    </header>
     <main>
         <section id="inicio" class="hero" aria-labelledby="hero-title">
             <div class="container hero__container">
