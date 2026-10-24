@@ -1,0 +1,123 @@
+/* ==========================================================================
+   PRISMA CURSOS — TIPOGRAFIA E HIERARQUIA DE TEXTO (css/components/typography.css)
+   Referência: Issue #2 — Família Montserrat e títulos do protótipo Figma
+   ========================================================================== */
+
+/* 1. Elementos semânticos de título (h1–h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+    overflow-wrap: break-word;
+}
+
+h1 {
+    font-size: var(--font-size-3xl);
+}
+
+h2 {
+    font-size: var(--font-size-2xl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-snug);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-snug);
+}
+
+p {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    overflow-wrap: break-word;
+}
+
+/* 2. Classes utilitárias de hierarquia visual (independentes da tag HTML) */
+.heading-hero {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+}
+
+/* Padrão de título de seção confirmado no Figma: cor #13AEF9, bold, centralizado */
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-10);
+}
+
+.section-header--left {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.section-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+}
+
+.section-title--light {
+    color: var(--color-text-primary);
+}
+
+.section-subtitle {
+    max-width: 42rem;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-secondary);
+}
+
+/* 3. Variações de corpo de texto e cores auxiliares */
+.text-lead {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-relaxed);
+}
+
+.text-body {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+}
+
+.text-sm {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+}
+
+.text-xs {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-normal);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-center {
+    text-align: center;
+}

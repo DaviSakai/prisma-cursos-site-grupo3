@@ -1,0 +1,148 @@
+/* ==========================================================================
+   PRISMA CURSOS — DESIGN SYSTEM TOKENS (css/variables.css)
+   Referência: Protótipo de Alta Fidelidade no Figma (Grupo 3) — Issue #2
+   ========================================================================== */
+
+:root {
+    /* ----------------------------------------------------------------------
+       1. CORES PRINCIPAIS (Confirmadas na paleta "Cores Principais" do Figma)
+       ---------------------------------------------------------------------- */
+    --color-primary: #13AEF9;
+    --color-background: #000000;
+    --color-surface: #262626;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    /* ----------------------------------------------------------------------
+       2. CORES REFRATADAS PELO PRISMA (Confirmadas na paleta do Figma)
+       Utilizadas em cards de cursos, badges de área e destaques cromáticos
+       ---------------------------------------------------------------------- */
+    --color-prism-red: #B80004;
+    --color-prism-orange: #F18D1A;
+    --color-prism-yellow: #C6BF00;
+    --color-prism-green: #00B454;
+    --color-prism-blue: #017BF6;
+    --color-prism-purple: #9146FC;
+
+    /* ----------------------------------------------------------------------
+       3. SUPERFÍCIES, TEXTOS E BORDAS (Confirmadas nos frames + complementares)
+       ---------------------------------------------------------------------- */
+    /* Superfícies secundárias observadas nos frames (navbar pill, cards de depoimento, etc.) */
+    --color-surface-elevated: #333333;
+    --color-surface-muted: #595959;
+    --color-surface-light: #D9D9D9;
+    --color-surface-info: rgba(19, 174, 249, 0.78);
+    --color-surface-primary-subtle: rgba(19, 174, 249, 0.14);
+
+    /* Hierarquia de texto */
+    --color-text: var(--color-white);
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #CCCCCC;
+    --color-text-muted: #999999;
+    --color-text-inverse: #000000;
+
+    /* Estados de interação e feedback (Decisão técnica complementar derivada dos tokens) */
+    --color-primary-hover: #3EC0FA;
+    --color-primary-active: #0D8ECF;
+    --color-secondary-hover: #383838;
+    --color-secondary-active: #1C1C1C;
+    --color-focus-ring: #13AEF9;
+
+    /* Semântica de validação (para formulário de contato RF08/RF09) */
+    --color-success: var(--color-prism-green);
+    --color-warning: var(--color-prism-orange);
+    --color-error: var(--color-prism-red);
+
+    /* Bordas e divisores */
+    --color-border: rgba(255, 255, 255, 0.12);
+    --color-border-strong: rgba(255, 255, 255, 0.24);
+    --color-border-primary: rgba(19, 174, 249, 0.45);
+
+    /* ----------------------------------------------------------------------
+       4. TIPOGRAFIA (Montserrat confirmada na Issue #2 e Plano de Issues)
+       ---------------------------------------------------------------------- */
+    --font-primary: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Pesos tipográficos */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Escala tipográfica responsiva (rem / clamp) */
+    --font-size-xs: 0.75rem;      /* 12px - tags, badges, legendas */
+    --font-size-sm: 0.875rem;     /* 14px - textos auxiliares, botões compactos */
+    --font-size-base: 1rem;       /* 16px - corpo de texto padrão */
+    --font-size-md: 1.125rem;     /* 18px - subtítulos, destaques de parágrafo */
+    --font-size-lg: 1.25rem;      /* 20px - títulos de cards */
+    --font-size-xl: 1.5rem;       /* 24px - subtítulos de seção */
+    --font-size-2xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);   /* 24px -> 36px - títulos de seção */
+    --font-size-3xl: clamp(1.875rem, 1.4rem + 2vw, 3rem);       /* 30px -> 48px - título hero */
+
+    /* Alturas de linha */
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.35;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.65;
+
+    /* Espaçamento entre letras */
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.04em;
+
+    /* ----------------------------------------------------------------------
+       5. ESPAÇAMENTOS E LAYOUT (Escala modular base 4px/8px)
+       ---------------------------------------------------------------------- */
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
+
+    /* Dimensões estruturais de layout */
+    --container-max-width: 75rem; /* 1200px */
+    --container-padding-x: var(--space-4);
+    --section-spacing-y: var(--space-12);
+    --navbar-height: 4.5rem;      /* 72px */
+
+    /* ----------------------------------------------------------------------
+       6. ARREDONDAMENTOS, BORDAS, SOMBRAS E TRANSIÇÕES
+       ---------------------------------------------------------------------- */
+    --radius-sm: 0.5rem;      /* 8px - campos e elementos pequenos */
+    --radius-md: 0.75rem;     /* 12px - imagens internas de cards */
+    --radius-lg: 1rem;        /* 16px - cards padrão */
+    --radius-xl: 1.5rem;      /* 24px - blocos de superfície e seções destacadas */
+    --radius-full: 9999px;    /* formato pílula (botões, tags e navbar do protótipo) */
+
+    --border-width: 1px;
+    --border-width-thick: 2px;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.6);
+    --shadow-glow-primary: 0 0 0 3px rgba(19, 174, 249, 0.35);
+
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+}
+
+/* Ajustes responsivos de tokens estruturais para Tablet e Desktop */
+@media (min-width: 768px) {
+    :root {
+        --container-padding-x: var(--space-6);
+        --section-spacing-y: var(--space-16);
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --container-padding-x: var(--space-8);
+        --section-spacing-y: var(--space-20);
+    }
+}

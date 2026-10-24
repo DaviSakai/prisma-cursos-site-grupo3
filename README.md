@@ -61,16 +61,40 @@ prisma-cursos-site/
 ├── .gitignore
 ├── css/
 │   ├── variables.css
-│   └── global.css
+│   ├── global.css
+│   └── components/
+│       ├── typography.css
+│       ├── buttons.css
+│       └── cards.css
 ├── js/
 │   └── main.js
 ├── assets/
 │   ├── images/
 │   └── icons/
 └── pages/
+    └── design-system.html
 ```
 
 Cada seção pode ter seu próprio arquivo em `css/`, importado no `index.html`.
+
+---
+
+## Design System (Issue #2)
+
+A base visual reutilizável está organizada em `css/variables.css`, `css/global.css` e `css/components/` (com vitrine de validação em `pages/design-system.html`):
+
+- **Tokens de Cores (`css/variables.css`)**:
+  - Principais: `--color-primary` (`#13AEF9`), `--color-background` (`#000000`), `--color-surface` (`#262626`), `--color-white` (`#FFFFFF`).
+  - Cores Refratadas pelo Prisma: `--color-prism-red` (`#B80004`), `--color-prism-orange` (`#F18D1A`), `--color-prism-yellow` (`#C6BF00`), `--color-prism-green` (`#00B454`), `--color-prism-blue` (`#017BF6`), `--color-prism-purple` (`#9146FC`).
+- **Tipografia (`css/components/typography.css`)**:
+  - Família `--font-primary: "Montserrat", sans-serif` (pesos `400`, `500`, `600`, `700`).
+  - Classes principais: `.heading-hero`, `.section-header`, `.section-title`, `.section-subtitle`, `.text-lead`, `.text-body`, `.text-sm`, `.text-secondary`.
+- **Layout e Containers (`css/global.css`)**:
+  - `.container` (largura máxima de `1200px` com padding lateral responsivo), `.section` (espaçamento vertical padrão) e `.section--surface` (bloco `#262626` com bordas arredondadas).
+- **Botões (`css/components/buttons.css`)**:
+  - `.btn` combinado com `.btn--primary`, `.btn--secondary`, `.btn--outline` e modificadores `.btn--sm`, `.btn--lg`, `.btn--full` (compatível com `<button>` e `<a>`).
+- **Cards e Badges (`css/components/cards.css`)**:
+  - `.card` combinado com `.card--prism-red`, `.card--prism-orange`, `.card--prism-yellow`, `.card--prism-green`, `.card--prism-blue`, `.card--prism-purple`, `.card--info`, `.card--elevated`, `.card--pill` e `.badge`.
 
 ---
 
