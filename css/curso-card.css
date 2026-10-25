@@ -1,0 +1,46 @@
+/* Card de curso */
+.card {
+    gap: 0 !important;
+}
+
+.card .badge,
+.card .btn--secondary {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: var(--color-white);
+}
+
+.card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card__body {
+    padding-bottom: 8px !important;
+    margin-bottom: 0 !important;
+}
+
+.card .card__title,
+.card .card__description {
+    color: #000000;
+}
+
+.card .card__title {
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-regular);
+    margin: 0 0 4px 0;
+}
+
+.card .card__description {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.card__footer {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
