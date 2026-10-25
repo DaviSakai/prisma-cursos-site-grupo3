@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/cursos-destaque.css">
     <link rel="stylesheet" href="css/curso-card.css">
+    <link rel="stylesheet" href="css/quem-somos.css">
 </head>
 <body>
     <header class="site-header">
@@ -29,7 +30,7 @@
                 </a>
                 <ul class="navbar__links">
                     <li><a href="#inicio" class="navbar__link">Início</a></li>
-                    <li><a href="#sobre-nos" class="navbar__link">Sobre nós</a></li>
+                    <li><a href="pages/sobre-nos.html" class="navbar__link">Sobre nós</a></li>
                     <li><a href="#cursos" class="navbar__link">Cursos</a></li>
                     <li><a href="#depoimentos" class="navbar__link">Depoimentos</a></li>
                     <li><a href="#contato" class="navbar__link">Contato</a></li>
@@ -125,7 +126,60 @@
                 </div>
             </div>
         </section>
-        <section id="sobre-nos"></section>
+        <section id="sobre-nos" class="section quem-somos" aria-labelledby="quem-somos-title">
+            <div class="container quem-somos__container">
+                <div class="quem-somos__differentials">
+                    <div class="quem-somos__media">
+                        <img
+                            src="assets/images/diferenciais-ilustracao.png"
+                            alt="Diferenciais da Prisma Cursos: Ensino Híbrido, Foco no Mercado e Formação Para Todos"
+                            width="800"
+                            height="800"
+                            class="quem-somos__image"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="quem-somos__content">
+                        <h2 id="quem-somos-title" class="quem-somos__title">Por que nos escolher?</h2>
+
+                        <ul class="quem-somos__pillars" role="list">
+                            <li class="quem-somos__pillar">
+                                <h3 class="quem-somos__pillar-title">Ensino Híbrido</h3>
+                                <p class="quem-somos__pillar-text">
+                                    A flexibilidade das aulas online unida à vivência prática dos encontros presenciais.
+                                </p>
+                            </li>
+                            <li class="quem-somos__pillar">
+                                <h3 class="quem-somos__pillar-title">Foco no Mercado</h3>
+                                <p class="quem-somos__pillar-text">
+                                    Cursos criados para garantir sua rápida inserção ou recolocação profissional.
+                                </p>
+                            </li>
+                            <li class="quem-somos__pillar">
+                                <h3 class="quem-somos__pillar-title">Para Todos</h3>
+                                <p class="quem-somos__pillar-text">
+                                    Seja para o seu primeiro emprego ou para uma transição de carreira, nós temos a formação ideal para você.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <div class="quem-somos__actions">
+                            <a href="pages/sobre-nos.html" class="btn btn--primary quem-somos__cta">Conheça nossa história</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quem-somos__values" aria-labelledby="quem-somos-values-title">
+                    <h3 id="quem-somos-values-title" class="quem-somos__values-title">Nosso valores</h3>
+                    <ul class="quem-somos__values-list" role="list">
+                        <li class="quem-somos__value-item">Inovação</li>
+                        <li class="quem-somos__value-item">Praticidade</li>
+                        <li class="quem-somos__value-item">Acessibilidade</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section id="cursos" class="section">
             <div class="container">
                 <div class="section-header">
