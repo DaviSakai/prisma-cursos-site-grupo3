@@ -55,7 +55,7 @@ body {
 
 /* Compensação de âncora para futura navbar fixa (RF01) */
 section[id] {
-    scroll-margin-top: calc(var(--navbar-height) + var(--space-4));
+    scroll-margin-top: calc(var(--navbar-height) + var(--header-padding-y) + var(--space-2));
 }
 
 /* 5. Mídias responsivas */
