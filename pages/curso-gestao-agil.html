@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/components/navbar-mobile.css">
     <link rel="stylesheet" href="../css/curso-detalhes.css"> 
+     <link rel="stylesheet" href="../css/footer.css" />
+    <style>
+    .footer__link,
+    .footer__formulario input,
+    .footer__formulario textarea,
+    .footer__formulario button {
+        background-color: var(--color-prism-green) !important;
+        border-color: var(--color-prism-green) !important;
+    }
+</style>
 </head>
 <body>
     <header class="site-header">
@@ -182,6 +192,105 @@
             </div>
         </section>
     </main>
+    <footer class="footer" id="contato">
+           <!-- Coluna 1: Institucional -->
+    <div class="footer__institucional">
+        <h3>Institucional</h3>
+
+        <nav aria-label="Institucional">
+            <!-- Por enquanto, textos sem links para evitar destinos inexistentes. -->
+            <span>Início</span>
+            <span>Nossa história</span>
+            <span>Parceiros</span>
+            <span>Valores</span>
+
+            <div class="footer__espaco"></div>
+
+            <span>Nossas Áreas de Atuação</span>
+            <span>Design</span>
+            <span>Tecnologia</span>
+            <span>Gestão</span>
+            <span>Faça o teste vocacional</span>
+        </nav>
+    </div>
+
+    <!-- Coluna 2: Contatos -->
+    <div class="footer__contatos">
+        <h3>Contatos</h3>
+
+        <div class="footer__link">
+            <span aria-hidden="true">☎</span>
+            <strong>(61) 91558-9897</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">in</span>
+            <strong>prisma cursos</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">◎</span>
+            <strong>@prisma.cursos</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">✉</span>
+            <strong>prisma.cursos@gmail.com</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">⌖</span>
+            <strong>SGAN 914 - Ed Prisma | DF</strong>
+        </div>
+    </div>
+
+    <!-- Coluna 3: Formulário visual -->
+    <div class="footer__formulario">
+        <h3>Nos envie uma mensagem</h3>
+
+        <form>
+            <input
+                type="text"
+                name="nome"
+                placeholder="Nome"
+                aria-label="Nome"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                aria-label="E-mail"
+                required
+            >
+
+            <textarea
+                name="mensagem"
+                placeholder="Mensagem"
+                aria-label="Mensagem"
+                required
+            ></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Coluna 4: Marca -->
+    <div class="footer__marca">
+        <p>Uma Empresa do Grupo</p>
+        <h3>Prisma Edu Corporation</h3>
+
+        <img
+            src="../assets/images/logo-prisma-simbolo.svg"
+            alt="Símbolo da Prisma Cursos"
+            class="footer__logo"
+        >
+
+        <p class="footer__nome-marca">PRISMA</p>
+        <p class="footer__submarca">C U R S O S</p>
+    </div>
+    </footer>
     <script src="../js/navbar-mobile.js"></script>
     <script src="../js/curso-form.js" defer></script>
 </body>
