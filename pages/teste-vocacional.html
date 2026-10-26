@@ -91,10 +91,11 @@
               Qual destas atividades desperta seu interesse?
             </legend>
             <p class="quiz__progresso-texto">
-              Pergunta 1 de 4 · Escolha a alternativa que mais combina com você
+              Pergunta 1 de 5 · Escolha a alternativa que mais combina com você
             </p>
             <ol class="quiz__progresso" aria-hidden="true">
               <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento"></li>
               <li class="quiz__segmento"></li>
               <li class="quiz__segmento"></li>
               <li class="quiz__segmento"></li>
@@ -172,11 +173,12 @@
               Qual destes cenários mais lhe representa?
             </legend>
             <p class="quiz__progresso-texto">
-              Pergunta 2 de 4 · Escolha a alternativa que mais combina com você
+              Pergunta 2 de 5 · Escolha a alternativa que mais combina com você
             </p>
             <ol class="quiz__progresso" aria-hidden="true">
               <li class="quiz__segmento is-preenchido"></li>
               <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento"></li>
               <li class="quiz__segmento"></li>
               <li class="quiz__segmento"></li>
             </ol>
@@ -260,12 +262,13 @@
               Qual destas conquistas lhe traria mais satisfação?
             </legend>
             <p class="quiz__progresso-texto">
-              Pergunta 3 de 4 · Escolha a alternativa que mais combina com você
+              Pergunta 3 de 5 · Escolha a alternativa que mais combina com você
             </p>
             <ol class="quiz__progresso" aria-hidden="true">
               <li class="quiz__segmento is-preenchido"></li>
               <li class="quiz__segmento is-preenchido"></li>
               <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento"></li>
               <li class="quiz__segmento"></li>
             </ol>
             <div class="quiz__opcoes">
@@ -345,16 +348,17 @@
             hidden
           >
             <legend class="quiz__pergunta">
-              Qual papel você prefere assumir em um trabalho em equipe?
+              Diante de um desafio inesperado, como você prefere contribuir?
             </legend>
             <p class="quiz__progresso-texto">
-              Pergunta 4 de 4 · Escolha a alternativa que mais combina com você
+              Pergunta 4 de 5 · Escolha a alternativa que mais combina com você
             </p>
             <ol class="quiz__progresso" aria-hidden="true">
               <li class="quiz__segmento is-preenchido"></li>
               <li class="quiz__segmento is-preenchido"></li>
               <li class="quiz__segmento is-preenchido"></li>
               <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento"></li>
             </ol>
             <div class="quiz__opcoes">
               <div class="quiz__opcao">
@@ -368,8 +372,8 @@
                 <label class="quiz__cartao" for="p4-a">
                   <span class="quiz__letra" aria-hidden="true">A</span>
                   <span class="quiz__texto"
-                    >Analisar problemas, propor soluções técnicas e ajudar a
-                    desenvolver ferramentas digitais.</span
+                    >Buscar uma maneira original e criativa de transmitir uma
+                    ideia com diversos meios de comunicação.</span
                   >
                 </label>
               </div>
@@ -384,8 +388,8 @@
                 <label class="quiz__cartao" for="p4-b">
                   <span class="quiz__letra" aria-hidden="true">B</span>
                   <span class="quiz__texto"
-                    >Contribuir com ideias criativas e cuidar da comunicação e
-                    da experiência visual do projeto.</span
+                    >Investigar as causas do problema, testar possibilidades e
+                    encontrar uma solução técnica eficaz.</span
                   >
                 </label>
               </div>
@@ -400,13 +404,103 @@
                 <label class="quiz__cartao" for="p4-c">
                   <span class="quiz__letra" aria-hidden="true">C</span>
                   <span class="quiz__texto"
+                    >Distribuir prioridades e tarefas em uma equipe e acompanhar
+                    o andamento das atividades para alcançar certo
+                    objetivo.</span
+                  >
+                </label>
+              </div>
+            </div>
+            <p class="quiz__erro" id="erro-4" data-quiz-erro hidden></p>
+            <div class="quiz__acoes">
+              <button
+                type="button"
+                class="quiz__botao quiz__botao--secundario"
+                data-quiz-acao="voltar"
+              >
+                <span aria-hidden="true">←</span> Voltar
+              </button>
+              <button
+                type="button"
+                class="quiz__botao quiz__botao--primario"
+                data-quiz-acao="avancar"
+              >
+                Avançar <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset
+            class="quiz__etapa"
+            id="etapa-5"
+            data-quiz-etapa="5"
+            aria-describedby="erro-5"
+            hidden
+          >
+            <legend class="quiz__pergunta">
+              Qual papel você prefere assumir em um trabalho em equipe?
+            </legend>
+            <p class="quiz__progresso-texto">
+              Pergunta 5 de 5 · Escolha a alternativa que mais combina com você
+            </p>
+            <ol class="quiz__progresso" aria-hidden="true">
+              <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento is-preenchido"></li>
+              <li class="quiz__segmento is-preenchido"></li>
+            </ol>
+            <div class="quiz__opcoes">
+              <div class="quiz__opcao">
+                <input
+                  class="quiz__radio"
+                  type="radio"
+                  id="p5-a"
+                  name="pergunta-5"
+                  value="a"
+                />
+                <label class="quiz__cartao" for="p5-a">
+                  <span class="quiz__letra" aria-hidden="true">A</span>
+                  <span class="quiz__texto"
+                    >Analisar problemas, propor soluções técnicas e ajudar a
+                    desenvolver ferramentas digitais.</span
+                  >
+                </label>
+              </div>
+              <div class="quiz__opcao">
+                <input
+                  class="quiz__radio"
+                  type="radio"
+                  id="p5-b"
+                  name="pergunta-5"
+                  value="b"
+                />
+                <label class="quiz__cartao" for="p5-b">
+                  <span class="quiz__letra" aria-hidden="true">B</span>
+                  <span class="quiz__texto"
+                    >Contribuir com ideias criativas e cuidar da comunicação e
+                    da experiência visual do projeto.</span
+                  >
+                </label>
+              </div>
+              <div class="quiz__opcao">
+                <input
+                  class="quiz__radio"
+                  type="radio"
+                  id="p5-c"
+                  name="pergunta-5"
+                  value="c"
+                />
+                <label class="quiz__cartao" for="p5-c">
+                  <span class="quiz__letra" aria-hidden="true">C</span>
+                  <span class="quiz__texto"
                     >Organizar as tarefas, acompanhar os prazos e ajudar a
                     equipe a concluir as entregas.</span
                   >
                 </label>
               </div>
             </div>
-            <p class="quiz__erro" id="erro-4" data-quiz-erro hidden></p>
+            <p class="quiz__erro" id="erro-5" data-quiz-erro hidden></p>
             <div class="quiz__acoes">
               <button
                 type="button"
@@ -427,7 +521,7 @@
         </div>
 
         <!-- RESULTADO: somente a estrutura. Conteúdo real entra na Issue 14,
-           com as regras aprovadas pelo grupo. Nada aqui é resultado calculado. -->
+             com as regras aprovadas pelo grupo. Nada aqui é resultado calculado. -->
         <section
           class="quiz__resultado"
           id="quiz-resultado"
@@ -460,7 +554,7 @@
         </section>
       </div>
     </main>
+
     <script src="../js/navbar-mobile.js"></script>
-    <!-- A lógica (js/teste-vocacional.js) entra na Issue 14 -->
   </body>
 </html>
