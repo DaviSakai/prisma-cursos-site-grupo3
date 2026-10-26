@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/components/typography.css">
     <link rel="stylesheet" href="../css/components/buttons.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/components/navbar-mobile.css">
     <link rel="stylesheet" href="../css/curso-detalhes.css"> 
 </head>
 <body>
@@ -24,10 +25,22 @@
                 <a href="../index.html#inicio" class="navbar__logo">
                     <img src="../assets/images/logo-prisma-texto.svg" alt="Prisma Cursos" width="120" height="44">
                 </a>
-                <ul class="navbar__links">
+                <button
+                    class="navbar__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="menu-principal"
+                    aria-label="Abrir menu"
+                    data-menu-toggle
+                >
+                    <span class="navbar__toggle-bar"></span>
+                    <span class="navbar__toggle-bar"></span>
+                    <span class="navbar__toggle-bar"></span>
+                </button>
+                <ul class="navbar__links" id="menu-principal" data-menu>
                     <li><a href="../index.html#inicio" class="navbar__link">Início</a></li>
                     <li><a href="sobre-nos.html" class="navbar__link">Sobre nós</a></li>
-                    <li><a href="../index.html#cursos" class="navbar__link">Cursos</a></li>
+                     <li><a href="cursos.html" class="navbar__link">Cursos</a></li>
                     <li><a href="../index.html#depoimentos" class="navbar__link">Depoimentos</a></li>
                     <li><a href="../index.html#contato" class="navbar__link">Contato</a></li>
                 </ul>
@@ -170,6 +183,8 @@
             </div>
         </section>
     </main>
+    <script src="../js/navbar-mobile.js"></script>
     <script src="../js/curso-form.js" defer></script>
+</body>
 </body>
 </html>
