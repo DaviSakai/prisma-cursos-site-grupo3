@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/curso-card.css" />
     <link rel="stylesheet" href="css/components/navbar-mobile.css" />
     <link rel="stylesheet" href="css/quem-somos.css" />
+    <link rel="stylesheet" href="css/depoimentos.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <header class="site-header">
@@ -267,32 +269,294 @@
                         </div>
                     </article>
 
-                    <article class="card card--prism-green card--interactive">
-                        <div class="card__media">
-                            <img src="assets/images/curso-agil.png" alt="Gestão Ágil de Projetos">
-                        </div>
-                        <div class="card__body">
-                            <h4 class="card__title">Gestão Ágil de Projetos</h4>
-                            <p class="card__description">Torne-se o líder que o mercado procura.</p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="badge-group">
-                                <span class="badge">Gestão</span>
-                                <span class="badge">Híbrido</span>
-                            </div>
-                            <a href="pages/curso-gestao-agil.html" class="btn btn--secondary btn--sm">Veja os detalhes</a>
-                        </div>
-                    </article>
+            <article class="card card--prism-green card--interactive">
+              <div class="card__media">
+                <img
+                  src="assets/images/curso-agil.png"
+                  alt="Gestão Ágil de Projetos"
+                />
+              </div>
+              <div class="card__body">
+                <h4 class="card__title">Gestão Ágil de Projetos</h4>
+                <p class="card__description">
+                  Torne-se o líder que o mercado procura.
+                </p>
+              </div>
+              <div class="card__footer">
+                <div class="badge-group">
+                  <span class="badge">Gestão</span>
+                  <span class="badge">Híbrido</span>
                 </div>
-                <div class="cursos-destaque__acoes">
-                    <a href="pages/cursos.html" class="btn btn--primary">Conheça todos os cursos</a>
+                <a
+                  href="cursos.html#gestao-agil"
+                  class="btn btn--secondary btn--sm"
+                  >Veja os detalhes</a
+                >
+              </div>
+            </article>
+          </div>
+          <div class="cursos-destaque__acoes">
+            <a href="cursos.html" class="btn btn--primary"
+              >Conheça todos os cursos</a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        id="depoimentos"
+        class="section depoimentos"
+        aria-labelledby="depoimentos-titulo"
+      >
+        <div class="container depoimentos__container">
+          <h2 id="depoimentos-titulo" class="depoimentos__titulo">
+            O que diz nossos alunos?
+          </h2>
+
+          <div class="depoimentos__grid">
+            <!-- Depoimento 1 -->
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/lucas.png"
+                  alt="Foto de Lucas"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Lucas M., 21 anos</h3>
+                  <p class="depoimentos__curso">
+                    Desenvolvimento Web Full Stack
+                  </p>
                 </div>
-            </div>
-        </section>
-        <section id="depoimentos"></section>
-        <section id="contato"></section>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Eu trabalhava como jovem aprendiz na área administrativa e não
+                via muito espaço para crescer. A Prisma me deu a base prática de
+                programação que eu precisava. Hoje sou Desenvolvedor Júnior!”
+              </blockquote>
+            </article>
+
+            <!-- Depoimento 2 -->
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/mariana.png"
+                  alt="Foto de Mariana"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Mariana S., 22 anos</h3>
+                  <p class="depoimentos__curso">Análise de Dados</p>
+                </div>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “O modelo híbrido salvou a minha rotina. Estudava a teoria no
+                ônibus e ia para as oficinas à noite. Deu tão certo que acabei
+                de conseguir minha primeira vaga na área de dados.”
+              </blockquote>
+            </article>
+
+            <!-- Depoimento 3 -->
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/joao.png"
+                  alt="Foto de João"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">João P., 34 anos</h3>
+                  <p class="depoimentos__curso">UX/UI Design</p>
+                </div>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Fazer transição de carreira depois dos 30 dá um frio na
+                barriga, mas as aulas presenciais me deixaram muito confiante.
+                Saí do curso com um portfólio real para mostrar nas
+                entrevistas.”
+              </blockquote>
+            </article>
+
+            <!-- Depoimento 4 -->
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/camila.png"
+                  alt="Foto de Camila"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Camila T., 28 anos</h3>
+                  <p class="depoimentos__curso">Gestão Ágil de Projetos</p>
+                </div>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “O aprendizado aqui é direto ao ponto e sem enrolação. Apliquei
+                os métodos de organização que aprendi no projeto final direto no
+                meu trabalho e fui promovida no mês seguinte!”
+              </blockquote>
+            </article>
+
+            <!-- Depoimento 5 -->
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/rafael.png"
+                  alt="Foto de Rafael"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Rafael C., 19 anos</h3>
+                  <p class="depoimentos__curso">Design Gráfico</p>
+                </div>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Eu só sabia o básico, mas a Prisma me ensinou a pensar como um
+                profissional. O fato de ter contato presencial com os
+                professores para tirar dúvidas na hora fez toda a diferença.”
+              </blockquote>
+            </article>
+
+            <!-- Depoimento 6 -->
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/beatriz.png"
+                  alt="Foto de Beatriz"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Beatriz L., 26 anos</h3>
+                  <p class="depoimentos__curso">Marketing Digital</p>
+                </div>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Estava cansada de cursos online que só ficavam na teoria. Na
+                Prisma, a gente cria campanhas de verdade. Terminei a formação
+                com experiência e já consegui meus primeiros clientes
+                freelance.”
+              </blockquote>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer" id="contato">
+           <!-- Coluna 1: Institucional -->
+    <div class="footer__institucional">
+        <h3>Institucional</h3>
+
+        <nav aria-label="Institucional">
+            <!-- Por enquanto, textos sem links para evitar destinos inexistentes. -->
+            <span>Início</span>
+            <span>Nossa história</span>
+            <span>Parceiros</span>
+            <span>Valores</span>
+
+            <div class="footer__espaco"></div>
+
+            <span>Nossas Áreas de Atuação</span>
+            <span>Design</span>
+            <span>Tecnologia</span>
+            <span>Gestão</span>
+            <span>Faça o teste vocacional</span>
+        </nav>
+    </div>
+
+    <!-- Coluna 2: Contatos -->
+    <div class="footer__contatos">
+        <h3>Contatos</h3>
+
+        <div class="footer__link">
+            <span aria-hidden="true">☎</span>
+            <strong>(61) 91558-9897</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">in</span>
+            <strong>prisma cursos</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">◎</span>
+            <strong>@prisma.cursos</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">✉</span>
+            <strong>prisma.cursos@gmail.com</strong>
+        </div>
+
+        <div class="footer__link">
+            <span aria-hidden="true">⌖</span>
+            <strong>SGAN 914 - Ed Prisma | DF</strong>
+        </div>
+    </div>
+
+    <!-- Coluna 3: Formulário visual -->
+    <div class="footer__formulario">
+        <h3>Nos envie uma mensagem</h3>
+
+        <form>
+            <input
+                type="text"
+                name="nome"
+                placeholder="Nome"
+                aria-label="Nome"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                aria-label="E-mail"
+                required
+            >
+
+            <textarea
+                name="mensagem"
+                placeholder="Mensagem"
+                aria-label="Mensagem"
+                required
+            ></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Coluna 4: Marca -->
+    <div class="footer__marca">
+        <p>Uma Empresa do Grupo</p>
+        <h3>Prisma Edu Corporation</h3>
+
+        <img
+            src="assets/images/logo-prisma-simbolo.svg"
+            alt="Símbolo da Prisma Cursos"
+            class="footer__logo"
+        >
+
+        <p class="footer__nome-marca">PRISMA</p>
+        <p class="footer__submarca">C U R S O S</p>
+    </div>
+    </footer>
     <script src="js/navbar-mobile.js"></script>
     <script src="js/main.js"></script>
   </body>
