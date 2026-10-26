@@ -1,0 +1,136 @@
+/* ==========================================================================
+   PRISMA CURSOS — SEÇÃO DE DEPOIMENTOS (css/depoimentos.css)
+   Referência: Protótipo de Alta Fidelidade no Figma (Grupo 3, nó 216-281) — Issue #9
+   Requisitos: RF06, RNF01, RNF04, RNF05, RNF06, RNF07
+   ========================================================================== */
+
+.depoimentos {
+    background-color: var(--color-surface);
+    padding-block: var(--section-spacing-y);
+}
+
+.depoimentos .depoimentos__container {
+    padding-inline: 0;
+}
+
+/* Bloco do título: 66px de altura de referência e 37px até o início da grade (103px total) */
+.depoimentos .depoimentos__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 66px;
+    margin: 0 0 37px;
+    padding-inline: var(--space-6);
+    font-family: var(--font-primary);
+    font-size: clamp(1.625rem, 1.25rem + 1.6vw, 2.375rem);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-normal);
+    color: var(--color-primary);
+    text-align: center;
+}
+
+/* Grade de depoimentos: 1 coluna no celular, 2 no tablet, 3 no desktop */
+.depoimentos .depoimentos__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--space-6);
+    padding-inline: var(--container-padding-x);
+}
+
+/* Card individual: preto a 50% sobre #262626 (~#131313), raio de 24px e padding horizontal de 16px */
+.depoimentos .depoimentos__card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 var(--space-4) var(--space-4);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    border-radius: var(--radius-xl);
+}
+
+/* Cabeçalho do card: 76px de referência, foto à esquerda e identificação à direita (gap de 11px) */
+.depoimentos .depoimentos__perfil {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 76px;
+    padding-block: 13px;
+}
+
+/* Foto do estudante: slot 50x50px com cantos de 15px sem encolhimento */
+.depoimentos .depoimentos__foto {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Identificação: nome/idade e curso em duas linhas, Montserrat 16px, peso 500, branco */
+.depoimentos .depoimentos__identificacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.depoimentos .depoimentos__nome,
+.depoimentos .depoimentos__curso {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.22;
+    letter-spacing: var(--letter-spacing-normal);
+    color: var(--color-white);
+    overflow-wrap: break-word;
+}
+
+/* Fala do estudante: centralizada, branca, Montserrat 16px, peso 500, sem truncamento */
+.depoimentos .depoimentos__texto {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.22;
+    letter-spacing: var(--letter-spacing-normal);
+    color: var(--color-white);
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/* Tablet: 2 colunas */
+@media (min-width: 768px) {
+    .depoimentos .depoimentos__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: var(--space-6);
+        row-gap: var(--space-8);
+        padding-inline: var(--space-6);
+    }
+}
+
+/* Desktop: 3 colunas e 2 linhas conforme medidas naturais do Figma */
+@media (min-width: 1024px) {
+    .depoimentos .depoimentos__titulo {
+        font-size: 2.375rem; /* 38px na escala natural do Figma */
+    }
+
+    .depoimentos .depoimentos__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 31px;
+        row-gap: 42px;
+        padding-inline: var(--space-6);
+    }
+
+    /* Alturas de referência do Figma com crescimento livre para preservar todo o conteúdo */
+    .depoimentos .depoimentos__card:nth-child(-n + 3) {
+        min-height: 217px;
+    }
+
+    .depoimentos .depoimentos__card:nth-child(n + 4) {
+        min-height: 192px;
+    }
+}

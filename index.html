@@ -320,119 +320,161 @@
           </div>
         </div>
       </section>
-      <section id="depoimentos" class="section depoimentos">
-    <div class="container">
-
-        <h2 class="depoimentos__titulo">
+      <section
+        id="depoimentos"
+        class="section depoimentos"
+        aria-labelledby="depoimentos-titulo"
+      >
+        <div class="container depoimentos__container">
+          <h2 id="depoimentos-titulo" class="depoimentos__titulo">
             O que diz nossos alunos?
-        </h2>
+          </h2>
 
-        <div class="depoimentos__grid">
-
+          <div class="depoimentos__grid">
             <!-- Depoimento 1 -->
-            <article class="depoimento-card">
-                <div class="depoimento-card__aluno">
-                    <img src="assets/images/lucas.png" alt="Foto de Lucas">
-                    <div>
-                        <h3>Lucas M., 21 anos</h3>
-                        <p>Desenvolvimento Web Full Stack</p>
-                    </div>
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/lucas.png"
+                  alt="Foto de Lucas"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Lucas M., 21 anos</h3>
+                  <p class="depoimentos__curso">
+                    Desenvolvimento Web Full Stack
+                  </p>
                 </div>
-                <blockquote>
-                    Eu trabalhava como jovem aprendiz na área administrativa
-                    e não via muito espaço para crescer. A Prisma me deu a
-                    base prática de programação que eu precisava. Hoje sou
-                    Desenvolvedor Júnior!
-                </blockquote>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Eu trabalhava como jovem aprendiz na área administrativa e não
+                via muito espaço para crescer. A Prisma me deu a base prática de
+                programação que eu precisava. Hoje sou Desenvolvedor Júnior!”
+              </blockquote>
             </article>
 
             <!-- Depoimento 2 -->
-            <article class="depoimento-card">
-                <div class="depoimento-card__aluno">
-                    <img src="assets/images/mariana.png" alt="Foto de Mariana">
-                    <div>
-                        <h3>Mariana S., 22 anos</h3>
-                        <p>Análise de Dados</p>
-                    </div>
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/mariana.png"
+                  alt="Foto de Mariana"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Mariana S., 22 anos</h3>
+                  <p class="depoimentos__curso">Análise de Dados</p>
                 </div>
-                <blockquote>
-                    O modelo híbrido salvou a minha rotina. Estudava a teoria
-                    no ônibus e ia para as oficinas à noite. Deu tão certo
-                    que consegui minha primeira vaga na área de dados.
-                </blockquote>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “O modelo híbrido salvou a minha rotina. Estudava a teoria no
+                ônibus e ia para as oficinas à noite. Deu tão certo que acabei
+                de conseguir minha primeira vaga na área de dados.”
+              </blockquote>
             </article>
 
             <!-- Depoimento 3 -->
-            <article class="depoimento-card">
-                <div class="depoimento-card__aluno">
-                    <img src="assets/images/joao.png" alt="Foto de João">
-                    <div>
-                        <h3>João P., 34 anos</h3>
-                        <p>UX/UI Design</p>
-                    </div>
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/joao.png"
+                  alt="Foto de João"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">João P., 34 anos</h3>
+                  <p class="depoimentos__curso">UX/UI Design</p>
                 </div>
-                <blockquote>
-                    Fazer transição de carreira depois dos 30 dá um frio na
-                    barriga, mas as aulas presenciais me deixaram muito
-                    confiante. Saí do curso com um portfólio real para
-                    mostrar nas entrevistas.
-                </blockquote>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Fazer transição de carreira depois dos 30 dá um frio na
+                barriga, mas as aulas presenciais me deixaram muito confiante.
+                Saí do curso com um portfólio real para mostrar nas
+                entrevistas.”
+              </blockquote>
             </article>
 
             <!-- Depoimento 4 -->
-            <article class="depoimento-card">
-                <div class="depoimento-card__aluno">
-                    <img src="assets/images/camila.png" alt="Foto de Camila">
-                    <div>
-                        <h3>Camila T., 28 anos</h3>
-                        <p>Gestão Ágil de Projetos</p>
-                    </div>
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/camila.png"
+                  alt="Foto de Camila"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Camila T., 28 anos</h3>
+                  <p class="depoimentos__curso">Gestão Ágil de Projetos</p>
                 </div>
-                <blockquote>
-                    O aprendizado aqui é direto ao ponto e sem enrolação.
-                    Apliquei os métodos de organização que aprendi no projeto
-                    final diretamente no meu trabalho e fui promovida no mês
-                    seguinte!
-                </blockquote>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “O aprendizado aqui é direto ao ponto e sem enrolação. Apliquei
+                os métodos de organização que aprendi no projeto final direto no
+                meu trabalho e fui promovida no mês seguinte!”
+              </blockquote>
             </article>
 
             <!-- Depoimento 5 -->
-            <article class="depoimento-card">
-                <div class="depoimento-card__aluno">
-                    <img src="assets/images/rafael.png" alt="Foto de Rafael">
-                    <div>
-                        <h3>Rafael C., 19 anos</h3>
-                        <p>Design Gráfico</p>
-                    </div>
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/rafael.png"
+                  alt="Foto de Rafael"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Rafael C., 19 anos</h3>
+                  <p class="depoimentos__curso">Design Gráfico</p>
                 </div>
-                <blockquote>
-                    Eu só sabia o básico, mas a Prisma me ensinou a pensar
-                    como um profissional. O contato presencial com os
-                    professores para tirar dúvidas na hora fez toda
-                    a diferença.
-                </blockquote>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Eu só sabia o básico, mas a Prisma me ensinou a pensar como um
+                profissional. O fato de ter contato presencial com os
+                professores para tirar dúvidas na hora fez toda a diferença.”
+              </blockquote>
             </article>
 
             <!-- Depoimento 6 -->
-            <article class="depoimento-card">
-                <div class="depoimento-card__aluno">
-                    <img src="assets/images/beatriz.png" alt="Foto de Beatriz">
-                    <div>
-                        <h3>Beatriz L., 26 anos</h3>
-                        <p>Marketing Digital</p>
-                    </div>
+            <article class="depoimentos__card">
+              <header class="depoimentos__perfil">
+                <img
+                  src="assets/images/beatriz.png"
+                  alt="Foto de Beatriz"
+                  width="50"
+                  height="50"
+                  class="depoimentos__foto"
+                  loading="lazy"
+                />
+                <div class="depoimentos__identificacao">
+                  <h3 class="depoimentos__nome">Beatriz L., 26 anos</h3>
+                  <p class="depoimentos__curso">Marketing Digital</p>
                 </div>
-                <blockquote>
-                    Estava cansada de cursos online que só ficavam na teoria.
-                    Na Prisma, a gente cria campanhas de verdade. Terminei a
-                    formação com experiência e já consegui meus primeiros
-                    clientes freelance.
-                </blockquote>
+              </header>
+              <blockquote class="depoimentos__texto">
+                “Estava cansada de cursos online que só ficavam na teoria. Na
+                Prisma, a gente cria campanhas de verdade. Terminei a formação
+                com experiência e já consegui meus primeiros clientes
+                freelance.”
+              </blockquote>
             </article>
-
+          </div>
         </div>
-    </div>
-</section>
+      </section>
     </main>
     <footer class="footer" id="contato">
            <!-- Coluna 1: Institucional -->
