@@ -1,174 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prisma Cursos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/components/typography.css">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/components/cards.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/cursos-destaque.css">
-    <link rel="stylesheet" href="css/curso-card.css">
-    <link rel="stylesheet" href="css/quem-somos.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components/typography.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/cards.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/cursos-destaque.css" />
+    <link rel="stylesheet" href="css/curso-card.css" />
+    <link rel="stylesheet" href="css/components/navbar-mobile.css" />
+    <link rel="stylesheet" href="css/quem-somos.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <nav class="navbar" aria-label="Navegação principal">
-            <div class="navbar__symbol">
-                <img src="assets/images/logo-prisma-simbolo.svg" alt="" width="136" height="52">
-            </div>
-            <div class="navbar__menu">
-                <a href="#inicio" class="navbar__logo">
-                    <img src="assets/images/logo-prisma-texto.svg" alt="Prisma Cursos" width="120" height="44">
-                </a>
-                <ul class="navbar__links">
-                    <li><a href="#inicio" class="navbar__link">Início</a></li>
-                    <li><a href="pages/sobre-nos.html" class="navbar__link">Sobre nós</a></li>
-                    <li><a href="pages/cursos.html" class="navbar__link">Cursos</a></li>
-                    <li><a href="#depoimentos" class="navbar__link">Depoimentos</a></li>
-                    <li><a href="#contato" class="navbar__link">Contato</a></li>
-                </ul>
-            </div>
-        </nav>        
+      <nav class="navbar" aria-label="Navegação principal">
+        <div class="navbar__symbol">
+          <img
+            src="assets/images/logo-prisma-simbolo.svg"
+            alt=""
+            width="136"
+            height="52"
+          />
+        </div>
+        <div class="navbar__menu">
+          <a href="#inicio" class="navbar__logo">
+            <img
+              src="assets/images/logo-prisma-texto.svg"
+              alt="Prisma Cursos"
+              width="120"
+              height="44"
+            />
+          </a>
+          <button
+            class="navbar__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+            aria-label="Abrir menu"
+            data-menu-toggle
+          >
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+            <span class="navbar__toggle-bar"></span>
+          </button>
+          <ul class="navbar__links" id="menu-principal" data-menu>
+            <li><a href="#inicio" class="navbar__link">Início</a></li>
+            <li><a href="#sobre-nos" class="navbar__link">Sobre nós</a></li>
+            <li><a href="#cursos" class="navbar__link">Cursos</a></li>
+            <li><a href="#depoimentos" class="navbar__link">Depoimentos</a></li>
+            <li><a href="#contato" class="navbar__link">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
-        <section id="inicio" class="hero" aria-labelledby="hero-title">
-            <div class="container hero__container">
-                <div class="hero__main">
-                    <div class="hero__content">
-                        <h1 id="hero-title" class="hero__title heading-hero">Seu futuro começa aqui!</h1>
-                        <p class="hero__description text-body">
-                            Mais do que um instituto de educação, a Prisma Cursos é a sua ponte direta para o mercado. Qualificação rápida, formato híbrido e foco 100% no que as empresas realmente procuram.
-                        </p>
-                        <div class="hero__actions">
-                            <a href="#cursos" class="btn btn--primary hero__cta">Conheça os cursos</a>
-                        </div>
-                    </div>
-
-                    <div class="hero__media">
-                        <img
-                            src="assets/images/hero-ilustracao.jpg"
-                            alt="Destaques da Prisma Cursos: 6 formações de alta qualidade, metodologia híbrida, foco 100% no mercado e projetos reais"
-                            width="840"
-                            height="670"
-                            class="hero__image"
-                        >
-                    </div>
-                </div>
-
-                <div class="hero__partners" aria-labelledby="hero-partners-title">
-                    <h2 id="hero-partners-title" class="hero__partners-title">Nossos parceiros</h2>
-                    <div class="hero__partners-bar">
-                        <ul class="hero__partners-list" role="list">
-                            <li class="hero__partners-item">
-                                <img
-                                    src="assets/images/parceiro-techcore.png"
-                                    alt="TechCore Solutions"
-                                    width="320"
-                                    height="106"
-                                    class="hero__partners-logo"
-                                >
-                            </li>
-                            <li class="hero__partners-item">
-                                <img
-                                    src="assets/images/parceiro-studio-aurora.png"
-                                    alt="Studio Aurora"
-                                    width="320"
-                                    height="107"
-                                    class="hero__partners-logo"
-                                >
-                            </li>
-                            <li class="hero__partners-item">
-                                <img
-                                    src="assets/images/parceiro-elevate.png"
-                                    alt="Elevate Partners"
-                                    width="147"
-                                    height="140"
-                                    class="hero__partners-logo hero__partners-logo--tall"
-                                >
-                            </li>
-                            <li class="hero__partners-item">
-                                <img
-                                    src="assets/images/parceiro-nexus.png"
-                                    alt="Nexus Consultoria"
-                                    width="320"
-                                    height="117"
-                                    class="hero__partners-logo"
-                                >
-                            </li>
-                            <li class="hero__partners-item">
-                                <img
-                                    src="assets/images/parceiro-pixelhouse.png"
-                                    alt="PixelHouse"
-                                    width="244"
-                                    height="140"
-                                    class="hero__partners-logo hero__partners-logo--tall"
-                                >
-                            </li>
-                            <li class="hero__partners-item">
-                                <img
-                                    src="assets/images/parceiro-codewave.png"
-                                    alt="CodeWave"
-                                    width="230"
-                                    height="140"
-                                    class="hero__partners-logo hero__partners-logo--tall"
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <section id="inicio" class="hero" aria-labelledby="hero-title">
+        <div class="container hero__container">
+          <div class="hero__main">
+            <div class="hero__content">
+              <h1 id="hero-title" class="hero__title heading-hero">
+                Seu futuro começa aqui!
+              </h1>
+              <p class="hero__description text-body">
+                Mais do que um instituto de educação, a Prisma Cursos é a sua
+                ponte direta para o mercado. Qualificação rápida, formato
+                híbrido e foco 100% no que as empresas realmente procuram.
+              </p>
+              <div class="hero__actions">
+                <a href="#cursos" class="btn btn--primary hero__cta"
+                  >Conheça os cursos</a
+                >
+              </div>
             </div>
-        </section>
-        <section id="sobre-nos" class="section quem-somos" aria-labelledby="quem-somos-title">
-            <div class="container quem-somos__container">
-                <div class="quem-somos__differentials">
-                    <div class="quem-somos__media">
-                        <img
-                            src="assets/images/diferenciais-ilustracao.png"
-                            alt="Diferenciais da Prisma Cursos: Ensino Híbrido, Foco no Mercado e Formação Para Todos"
-                            width="800"
-                            height="800"
-                            class="quem-somos__image"
-                            loading="lazy"
-                        >
-                    </div>
 
-                    <div class="quem-somos__content">
-                        <h2 id="quem-somos-title" class="quem-somos__title">Por que nos escolher?</h2>
+            <div class="hero__media">
+              <img
+                src="assets/images/hero-ilustracao.jpg"
+                alt="Destaques da Prisma Cursos: 6 formações de alta qualidade, metodologia híbrida, foco 100% no mercado e projetos reais"
+                width="840"
+                height="670"
+                class="hero__image"
+              />
+            </div>
+          </div>
 
-                        <ul class="quem-somos__pillars" role="list">
-                            <li class="quem-somos__pillar">
-                                <h3 class="quem-somos__pillar-title">Ensino Híbrido</h3>
-                                <p class="quem-somos__pillar-text">
-                                    A flexibilidade das aulas online unida à vivência prática dos encontros presenciais.
-                                </p>
-                            </li>
-                            <li class="quem-somos__pillar">
-                                <h3 class="quem-somos__pillar-title">Foco no Mercado</h3>
-                                <p class="quem-somos__pillar-text">
-                                    Cursos criados para garantir sua rápida inserção ou recolocação profissional.
-                                </p>
-                            </li>
-                            <li class="quem-somos__pillar">
-                                <h3 class="quem-somos__pillar-title">Para Todos</h3>
-                                <p class="quem-somos__pillar-text">
-                                    Seja para o seu primeiro emprego ou para uma transição de carreira, nós temos a formação ideal para você.
-                                </p>
-                            </li>
-                        </ul>
+          <div class="hero__partners" aria-labelledby="hero-partners-title">
+            <h2 id="hero-partners-title" class="hero__partners-title">
+              Nossos parceiros
+            </h2>
+            <div class="hero__partners-bar">
+              <ul class="hero__partners-list" role="list">
+                <li class="hero__partners-item">
+                  <img
+                    src="assets/images/parceiro-techcore.png"
+                    alt="TechCore Solutions"
+                    width="320"
+                    height="106"
+                    class="hero__partners-logo"
+                  />
+                </li>
+                <li class="hero__partners-item">
+                  <img
+                    src="assets/images/parceiro-studio-aurora.png"
+                    alt="Studio Aurora"
+                    width="320"
+                    height="107"
+                    class="hero__partners-logo"
+                  />
+                </li>
+                <li class="hero__partners-item">
+                  <img
+                    src="assets/images/parceiro-elevate.png"
+                    alt="Elevate Partners"
+                    width="147"
+                    height="140"
+                    class="hero__partners-logo hero__partners-logo--tall"
+                  />
+                </li>
+                <li class="hero__partners-item">
+                  <img
+                    src="assets/images/parceiro-nexus.png"
+                    alt="Nexus Consultoria"
+                    width="320"
+                    height="117"
+                    class="hero__partners-logo"
+                  />
+                </li>
+                <li class="hero__partners-item">
+                  <img
+                    src="assets/images/parceiro-pixelhouse.png"
+                    alt="PixelHouse"
+                    width="244"
+                    height="140"
+                    class="hero__partners-logo hero__partners-logo--tall"
+                  />
+                </li>
+                <li class="hero__partners-item">
+                  <img
+                    src="assets/images/parceiro-codewave.png"
+                    alt="CodeWave"
+                    width="230"
+                    height="140"
+                    class="hero__partners-logo hero__partners-logo--tall"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="sobre-nos"
+        class="section quem-somos"
+        aria-labelledby="quem-somos-title"
+      >
+        <div class="container quem-somos__container">
+          <div class="quem-somos__differentials">
+            <div class="quem-somos__media">
+              <img
+                src="assets/images/diferenciais-ilustracao.png"
+                alt="Diferenciais da Prisma Cursos: Ensino Híbrido, Foco no Mercado e Formação Para Todos"
+                width="800"
+                height="800"
+                class="quem-somos__image"
+                loading="lazy"
+              />
+            </div>
 
-                        <div class="quem-somos__actions">
-                            <a href="pages/sobre-nos.html" class="btn btn--primary quem-somos__cta">Conheça nossa história</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="quem-somos__content">
+              <h2 id="quem-somos-title" class="quem-somos__title">
+                Por que nos escolher?
+              </h2>
+
+              <ul class="quem-somos__pillars" role="list">
+                <li class="quem-somos__pillar">
+                  <h3 class="quem-somos__pillar-title">Ensino Híbrido</h3>
+                  <p class="quem-somos__pillar-text">
+                    A flexibilidade das aulas online unida à vivência prática
+                    dos encontros presenciais.
+                  </p>
+                </li>
+                <li class="quem-somos__pillar">
+                  <h3 class="quem-somos__pillar-title">Foco no Mercado</h3>
+                  <p class="quem-somos__pillar-text">
+                    Cursos criados para garantir sua rápida inserção ou
+                    recolocação profissional.
+                  </p>
+                </li>
+                <li class="quem-somos__pillar">
+                  <h3 class="quem-somos__pillar-title">Para Todos</h3>
+                  <p class="quem-somos__pillar-text">
+                    Seja para o seu primeiro emprego ou para uma transição de
+                    carreira, nós temos a formação ideal para você.
+                  </p>
+                </li>
+              </ul>
+
+              <div class="quem-somos__actions">
+                <a
+                  href="pages/sobre-nos.html"
+                  class="btn btn--primary quem-somos__cta"
+                  >Conheça nossa história</a
+                >
+              </div>
+            </div>
+          </div>
 
                 <div class="quem-somos__values" aria-labelledby="quem-somos-values-title">
                     <h3 id="quem-somos-values-title" class="quem-somos__values-title">Nosso valores</h3>
@@ -246,6 +293,7 @@
         <section id="contato"></section>
     </main>
     <footer></footer>
+    <script src="js/navbar-mobile.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
