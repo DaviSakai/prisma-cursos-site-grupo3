@@ -4,11 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnVoltar = document.getElementById('btnVoltar');
     const telefoneInput = document.querySelector('input[name="telefone"]');
 
+    // Guard clause
+    if (!form || !telefoneInput) return;
+
     // Telefone
     telefoneInput.addEventListener('input', function (e) {
-        let num = e.target.value.replace(/\D/g, ''); 
-        
-        //formatação (XX) XXXXX-XXXX
+        let num = e.target.value.replace(/\D/g, '');
+
+        // formatação (XX) XXXXX-XXXX
         let formatado = num;
         if (num.length > 2) {
             formatado = `(${num.substring(0, 2)}) ${num.substring(2, 7)}`;
