@@ -26,7 +26,7 @@
   };
 
   // Conteúdo das telas de resultado (conforme os frames do Figma)
-  var DESTINO_CURSOS = "../index.html#cursos"; // ajustar quando o catálogo tiver destinos próprios
+  var DESTINO_CURSOS = "cursos.html"; // ajustar quando o catálogo tiver destinos próprios
   var IMAGEM_EMPATE = "../assets/images/resultado-empate.png";
 
   var AREAS = {
@@ -44,6 +44,7 @@
       cursos: [
         {
           nome: "Desenvolvimento Web Fullstack",
+          link: "curso-web-fullstack.html",
           descricao: "",
           imagem: "../assets/images/curso-web.png",
           fundo: "#9b0a0a",
@@ -51,6 +52,7 @@
         },
         {
           nome: "Análise de Dados",
+          link: "curso-analise-dados.html",
           descricao: "Transforme números em decisões estratégicas",
           imagem: "../assets/images/curso-analise-dados.jpg",
           fundo: "#f28c1b",
@@ -76,6 +78,7 @@
       cursos: [
         {
           nome: "UX/UI Design",
+          link: "curso-ux-ui.html",
           descricao: "Mergulhe na mente do utilizador",
           imagem: "../assets/images/curso-ux.png",
           fundo: "#cfcf14",
@@ -83,6 +86,7 @@
         },
         {
           nome: "Design Gráfico e Branding",
+          link: "curso-design-grafico.html",
           descricao: "Dê vida a marcas de sucesso",
           imagem: "../assets/images/curso-design-grafico.jpg",
           fundo: "#0c4fb0",
@@ -108,6 +112,7 @@
       cursos: [
         {
           nome: "Gestão Ágil de Projetos",
+          link: "curso-gestao-agil.html",
           descricao: "Tome as rédeas que o mercado precisa",
           imagem: "../assets/images/curso-agil.png",
           fundo: "#16a34a",
@@ -115,6 +120,7 @@
         },
         {
           nome: "Administração e Negócios",
+          link: "curso-admin-negocios.html",
           descricao: "Uma base sólida para o mundo corporativo",
           imagem: "../assets/images/curso-administracao.jpg",
           fundo: "#6d3fb0",
@@ -312,7 +318,7 @@
 
       var link = document.createElement("a");
       link.className = "quiz__res-curso-link";
-      link.href = DESTINO_CURSOS;
+      link.href = curso.link || DESTINO_CURSOS;
       link.textContent = "Veja os detalhes";
       link.setAttribute(
         "aria-label",
