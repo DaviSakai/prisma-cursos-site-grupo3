@@ -522,20 +522,105 @@
 
         <!-- RESULTADO: somente a estrutura. Conteúdo real entra na Issue 14,
              com as regras aprovadas pelo grupo. Nada aqui é resultado calculado. -->
+        <!-- Substitua TODO o <section id="quiz-resultado"> ... </section> por este bloco -->
         <section
           class="quiz__resultado"
           id="quiz-resultado"
-          aria-labelledby="quiz-resultado-titulo"
+          aria-label="Resultado do teste"
           tabindex="-1"
           hidden
         >
-          <p class="quiz__resultado-rotulo">Seu resultado</p>
-          <h2
-            class="quiz__resultado-titulo"
-            id="quiz-resultado-titulo"
-            data-quiz-resultado-titulo
-          ></h2>
-          <p class="quiz__resultado-texto" data-quiz-resultado-texto></p>
+          <!-- Resultado de uma área (Tecnologia, Design ou Gestão) -->
+          <div data-quiz-resultado-area hidden>
+            <p class="quiz__res-intro">Você combina com a área de</p>
+            <h2 class="quiz__res-area-nome" data-quiz-resultado-titulo></h2>
+            <p class="quiz__res-subtitulo" data-quiz-resultado-subtitulo></p>
+
+            <div class="quiz__res-bloco">
+              <p class="quiz__res-texto" data-quiz-resultado-texto></p>
+              <img
+                class="quiz__res-imagem"
+                data-quiz-resultado-imagem
+                alt=""
+                hidden
+              />
+            </div>
+
+            <h3 class="quiz__res-secao">Características marcantes</h3>
+            <ul class="quiz__res-tags" data-quiz-resultado-tags></ul>
+
+            <h3 class="quiz__res-secao">Sugestões de cursos</h3>
+            <ul class="quiz__res-cursos" data-quiz-resultado-cursos></ul>
+
+            <h3 class="quiz__res-secao">Aproveite nosso cupom!</h3>
+            <p class="quiz__res-cupom" data-quiz-resultado-cupom></p>
+            <p
+              class="quiz__res-cupom-texto"
+              data-quiz-resultado-cupom-texto
+            ></p>
+          </div>
+
+          <!-- Resultado de empate -->
+          <div data-quiz-resultado-empate hidden>
+            <h2 class="quiz__res-area-nome">
+              Seu perfil combina com mais de uma área
+            </h2>
+            <p class="quiz__res-subtitulo">
+              Você tem talentos que podem seguir diferentes caminhos
+              profissionais.
+            </p>
+
+            <div class="quiz__res-bloco">
+              <p class="quiz__res-texto">
+                Suas respostas mostram afinidade com mais de uma área: Design,
+                Tecnologia ou Gestão. Isso significa que você pode ter
+                interesses e habilidades que se complementam!
+              </p>
+              <img
+                class="quiz__res-imagem"
+                data-quiz-resultado-imagem-empate
+                alt=""
+                hidden
+              />
+            </div>
+
+            <h3 class="quiz__res-secao">O que fazer agora?</h3>
+            <ul class="quiz__res-lista">
+              <li>
+                <strong>Explore suas possibilidades:</strong> conheça melhor as
+                áreas que despertaram seu interesse.
+              </li>
+              <li>
+                <strong>Descubra seus pontos fortes:</strong> identifique as
+                atividades que mais combinam com você.
+              </li>
+              <li>
+                <strong>Dê o próximo passo:</strong> busque cursos e
+                experiências que ajudem a desenvolver suas habilidades.
+              </li>
+            </ul>
+
+            <h3 class="quiz__res-secao">Lembre-se!</h3>
+            <p class="quiz__res-cupom-texto">
+              Você não precisa se limitar a uma única área. Muitas profissões
+              combinam criatividade, tecnologia e organização. Continue
+              explorando e descubra onde seu potencial pode chegar!
+            </p>
+
+            <h3 class="quiz__res-secao">Aproveite nosso cupom!</h3>
+            <p class="quiz__res-cupom">PRISMATICO</p>
+            <p class="quiz__res-cupom-texto">
+              Use o cupom “PRISMATICO” para obter 15% de desconto na sua
+              inscrição em qualquer um dos cursos da Prisma Cursos.
+            </p>
+
+            <p>
+              <a class="quiz__res-link-cursos" href="../index.html#cursos"
+                >Explore nossos cursos aqui!</a
+              >
+            </p>
+          </div>
+
           <div class="quiz__acoes">
             <button
               type="button"
@@ -544,17 +629,12 @@
             >
               Refazer o teste
             </button>
-            <a
-              class="quiz__botao quiz__botao--primario"
-              href="../index.html#cursos"
-              data-quiz-resultado-link
-              >Conheça os cursos</a
-            >
           </div>
         </section>
       </div>
     </main>
 
     <script src="../js/navbar-mobile.js"></script>
+    <script src="../js/teste-vocacional.js"></script>
   </body>
 </html>

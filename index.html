@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/quem-somos.css" />
     <link rel="stylesheet" href="css/depoimentos.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/teste-chamada.css" />
   </head>
   <body>
     <header class="site-header">
@@ -303,6 +304,41 @@
         </div>
       </section>
       <section
+        class="section teste-chamada"
+        aria-labelledby="teste-chamada-titulo"
+      >
+        <div class="container">
+          <div class="teste-chamada__card">
+            <div class="teste-chamada__conteudo">
+              <h2 id="teste-chamada-titulo" class="teste-chamada__titulo">
+                Qual área combina mais com você?
+              </h2>
+              <p class="teste-chamada__texto">
+                Ainda está pouco perdido sobre qual o melhor caminho a seguir?
+                Não se preocupe! Responda a 5 perguntas rápidas, descubra qual é
+                a área que tem mais a ver consigo e, de bónus, desbloqueie uma
+                <strong class="teste-chamada__destaque"
+                  >oferta exclusiva</strong
+                >
+                para a sua matrícula.
+              </p>
+              <div class="teste-chamada__acao">
+                <a href="pages/teste-vocacional.html" class="btn btn--primary"
+                  >Faça o teste agora!</a
+                >
+              </div>
+            </div>
+            <div class="teste-chamada__imagem">
+              <img
+                src="assets/images/teste-vocacional-placa.png"
+                alt="Placa de direção com as áreas Design, Tecnologia e Gestão"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
         id="depoimentos"
         class="section depoimentos"
         aria-labelledby="depoimentos-titulo"
@@ -459,103 +495,103 @@
       </section>
     </main>
     <footer class="footer" id="contato">
-           <!-- Coluna 1: Institucional -->
-    <div class="footer__institucional">
+      <!-- Coluna 1: Institucional -->
+      <div class="footer__institucional">
         <h3>Institucional</h3>
 
         <nav aria-label="Institucional">
-            <!-- Por enquanto, textos sem links para evitar destinos inexistentes. -->
-            <span>Início</span>
-            <span>Nossa história</span>
-            <span>Parceiros</span>
-            <span>Valores</span>
+          <!-- Por enquanto, textos sem links para evitar destinos inexistentes. -->
+          <span>Início</span>
+          <span>Nossa história</span>
+          <span>Parceiros</span>
+          <span>Valores</span>
 
-            <div class="footer__espaco"></div>
+          <div class="footer__espaco"></div>
 
-            <span>Nossas Áreas de Atuação</span>
-            <span>Design</span>
-            <span>Tecnologia</span>
-            <span>Gestão</span>
-            <span>Faça o teste vocacional</span>
+          <span>Nossas Áreas de Atuação</span>
+          <span>Design</span>
+          <span>Tecnologia</span>
+          <span>Gestão</span>
+          <span>Faça o teste vocacional</span>
         </nav>
-    </div>
+      </div>
 
-    <!-- Coluna 2: Contatos -->
-    <div class="footer__contatos">
+      <!-- Coluna 2: Contatos -->
+      <div class="footer__contatos">
         <h3>Contatos</h3>
 
         <div class="footer__link">
-            <span aria-hidden="true">☎</span>
-            <strong>(61) 91558-9897</strong>
+          <span aria-hidden="true">☎</span>
+          <strong>(61) 91558-9897</strong>
         </div>
 
         <div class="footer__link">
-            <span aria-hidden="true">in</span>
-            <strong>prisma cursos</strong>
+          <span aria-hidden="true">in</span>
+          <strong>prisma cursos</strong>
         </div>
 
         <div class="footer__link">
-            <span aria-hidden="true">◎</span>
-            <strong>@prisma.cursos</strong>
+          <span aria-hidden="true">◎</span>
+          <strong>@prisma.cursos</strong>
         </div>
 
         <div class="footer__link">
-            <span aria-hidden="true">✉</span>
-            <strong>prisma.cursos@gmail.com</strong>
+          <span aria-hidden="true">✉</span>
+          <strong>prisma.cursos@gmail.com</strong>
         </div>
 
         <div class="footer__link">
-            <span aria-hidden="true">⌖</span>
-            <strong>SGAN 914 - Ed Prisma | DF</strong>
+          <span aria-hidden="true">⌖</span>
+          <strong>SGAN 914 - Ed Prisma | DF</strong>
         </div>
-    </div>
+      </div>
 
-    <!-- Coluna 3: Formulário visual -->
-    <div class="footer__formulario">
+      <!-- Coluna 3: Formulário visual -->
+      <div class="footer__formulario">
         <h3>Nos envie uma mensagem</h3>
 
         <form>
-            <input
-                type="text"
-                name="nome"
-                placeholder="Nome"
-                aria-label="Nome"
-                required
-            >
+          <input
+            type="text"
+            name="nome"
+            placeholder="Nome"
+            aria-label="Nome"
+            required
+          />
 
-            <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                aria-label="E-mail"
-                required
-            >
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            aria-label="E-mail"
+            required
+          />
 
-            <textarea
-                name="mensagem"
-                placeholder="Mensagem"
-                aria-label="Mensagem"
-                required
-            ></textarea>
+          <textarea
+            name="mensagem"
+            placeholder="Mensagem"
+            aria-label="Mensagem"
+            required
+          ></textarea>
 
-            <button type="submit">Enviar</button>
+          <button type="submit">Enviar</button>
         </form>
-    </div>
+      </div>
 
-    <!-- Coluna 4: Marca -->
-    <div class="footer__marca">
+      <!-- Coluna 4: Marca -->
+      <div class="footer__marca">
         <p>Uma Empresa do Grupo</p>
         <h3>Prisma Edu Corporation</h3>
 
         <img
-            src="assets/images/logo-prisma-simbolo.svg"
-            alt="Símbolo da Prisma Cursos"
-            class="footer__logo"
-        >
+          src="assets/images/logo-prisma-simbolo.svg"
+          alt="Símbolo da Prisma Cursos"
+          class="footer__logo"
+        />
 
         <p class="footer__nome-marca">PRISMA</p>
         <p class="footer__submarca">C U R S O S</p>
-    </div>
+      </div>
     </footer>
     <script src="js/navbar-mobile.js"></script>
     <script src="js/main.js"></script>
