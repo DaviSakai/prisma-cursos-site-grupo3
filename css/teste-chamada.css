@@ -1,0 +1,47 @@
+/* Chamada para o teste vocacional na página principal */
+.teste-chamada__card {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  background-color: var(--color-surface, #262626);
+  border-radius: 1.5rem;
+}
+
+.teste-chamada__titulo {
+  margin: 0 0 1rem;
+  color: var(--color-primary, #12a8f5);
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.teste-chamada__texto {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.teste-chamada__destaque {
+  color: var(--color-primary, #12a8f5);
+  font-weight: 700;
+}
+
+.teste-chamada__acao {
+  display: flex;
+  justify-content: center;
+}
+
+.teste-chamada__imagem img {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .teste-chamada__card {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}

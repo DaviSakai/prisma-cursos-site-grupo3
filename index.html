@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/quem-somos.css" />
     <link rel="stylesheet" href="css/depoimentos.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/teste-chamada.css" />
   </head>
   <body>
     <header class="site-header">
@@ -58,8 +59,8 @@
           </button>
           <ul class="navbar__links" id="menu-principal" data-menu>
             <li><a href="#inicio" class="navbar__link">Início</a></li>
-            <li><a href="#sobre-nos" class="navbar__link">Sobre nós</a></li>
-            <li><a href="#cursos" class="navbar__link">Cursos</a></li>
+            <li><a href="pages/sobre-nos.html" class="navbar__link">Sobre nós</a></li>
+             <li><a href="pages/cursos.html" class="navbar__link">Cursos</a></li>
             <li><a href="#depoimentos" class="navbar__link">Depoimentos</a></li>
             <li><a href="#contato" class="navbar__link">Contato</a></li>
           </ul>
@@ -219,73 +220,55 @@
             </div>
           </div>
 
-          <div
-            class="quem-somos__values"
-            aria-labelledby="quem-somos-values-title"
-          >
-            <h3 id="quem-somos-values-title" class="quem-somos__values-title">
-              Nosso valores
-            </h3>
-            <ul class="quem-somos__values-list" role="list">
-              <li class="quem-somos__value-item">Inovação</li>
-              <li class="quem-somos__value-item">Praticidade</li>
-              <li class="quem-somos__value-item">Acessibilidade</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="cursos" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Nossos Cursos</h2>
-          </div>
-          <div class="cursos-destaque__grid">
-            <article class="card card--prism-red card--interactive">
-              <div class="card__media">
-                <img
-                  src="assets/images/curso-web.png"
-                  alt="Desenvolvimento Web Full Stack"
-                />
-              </div>
-              <div class="card__body">
-                <h4 class="card__title">Desenvolvimento Web Full Stack</h4>
-                <p class="card__description">
-                  Aprenda a criar sistemas do zero.
-                </p>
-              </div>
-              <div class="card__footer">
-                <div class="badge-group">
-                  <span class="badge">Tecnologia</span>
-                  <span class="badge">Híbrido</span>
+                <div class="quem-somos__values" aria-labelledby="quem-somos-values-title">
+                    <h3 id="quem-somos-values-title" class="quem-somos__values-title">Nosso valores</h3>
+                    <ul class="quem-somos__values-list" role="list">
+                        <li class="quem-somos__value-item">Inovação</li>
+                        <li class="quem-somos__value-item">Praticidade</li>
+                        <li class="quem-somos__value-item">Acessibilidade</li>
+                    </ul>
                 </div>
-                <a
-                  href="cursos.html#web-full-stack"
-                  class="btn btn--secondary btn--sm"
-                  >Veja os detalhes</a
-                >
-              </div>
-            </article>
+            </div>
+        </section>
+        <section id="cursos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossos Cursos</h2>
+                </div>
+                <div class="cursos-destaque__grid">
+                    <article class="card card--prism-red card--interactive">
+                        <div class="card__media">
+                            <img src="assets/images/curso-web.png" alt="Desenvolvimento Web Full Stack">
+                        </div>
+                        <div class="card__body">
+                            <h4 class="card__title">Desenvolvimento Web Full Stack</h4>
+                            <p class="card__description">Aprenda a criar sistemas do zero.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="badge-group">
+                                <span class="badge">Tecnologia</span>
+                                <span class="badge">Híbrido</span>
+                            </div>
+                            <a href="pages/curso-web-fullstack.html" class="btn btn--secondary btn--sm">Veja os detalhes</a>
+                        </div>
+                    </article>
 
-            <article class="card card--prism-yellow card--interactive">
-              <div class="card__media">
-                <img src="assets/images/curso-ux.png" alt="UX/UI Design" />
-              </div>
-              <div class="card__body">
-                <h4 class="card__title">UX/UI Design</h4>
-                <p class="card__description">
-                  Desenhe experiências digitais memoráveis.
-                </p>
-              </div>
-              <div class="card__footer">
-                <div class="badge-group">
-                  <span class="badge">Design</span>
-                  <span class="badge">Híbrido</span>
-                </div>
-                <a href="cursos.html#ux-ui" class="btn btn--secondary btn--sm"
-                  >Veja os detalhes</a
-                >
-              </div>
-            </article>
+                    <article class="card card--prism-yellow card--interactive">
+                        <div class="card__media">
+                            <img src="assets/images/curso-ux.png" alt="UX/UI Design">
+                        </div>
+                        <div class="card__body">
+                            <h4 class="card__title">UX/UI Design</h4>
+                            <p class="card__description">Desenhe experiências digitais memoráveis.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="badge-group">
+                                <span class="badge">Design</span>
+                                <span class="badge">Híbrido</span>
+                            </div>
+                            <a href="pages/curso-ux-ui.html" class="btn btn--secondary btn--sm">Veja os detalhes</a>
+                        </div>
+                    </article>
 
             <article class="card card--prism-green card--interactive">
               <div class="card__media">
@@ -306,7 +289,7 @@
                   <span class="badge">Híbrido</span>
                 </div>
                 <a
-                  href="cursos.html#gestao-agil"
+                  href="pages/curso-gestao-agil.html"
                   class="btn btn--secondary btn--sm"
                   >Veja os detalhes</a
                 >
@@ -314,9 +297,44 @@
             </article>
           </div>
           <div class="cursos-destaque__acoes">
-            <a href="cursos.html" class="btn btn--primary"
+            <a href="pages/cursos.html" class="btn btn--primary"
               >Conheça todos os cursos</a
             >
+          </div>
+        </div>
+      </section>
+      <section
+        class="section teste-chamada"
+        aria-labelledby="teste-chamada-titulo"
+      >
+        <div class="container">
+          <div class="teste-chamada__card">
+            <div class="teste-chamada__conteudo">
+              <h2 id="teste-chamada-titulo" class="teste-chamada__titulo">
+                Qual área combina mais com você?
+              </h2>
+              <p class="teste-chamada__texto">
+                Ainda está pouco perdido sobre qual o melhor caminho a seguir?
+                Não se preocupe! Responda a 5 perguntas rápidas, descubra qual é
+                a área que tem mais a ver consigo e, de bónus, desbloqueie uma
+                <strong class="teste-chamada__destaque"
+                  >oferta exclusiva</strong
+                >
+                para a sua matrícula.
+              </p>
+              <div class="teste-chamada__acao">
+                <a href="pages/teste-vocacional.html" class="btn btn--primary"
+                  >Faça o teste agora!</a
+                >
+              </div>
+            </div>
+            <div class="teste-chamada__imagem">
+              <img
+                src="assets/images/teste-vocacional-placa.png"
+                alt="Placa de direção com as áreas Design, Tecnologia e Gestão"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
