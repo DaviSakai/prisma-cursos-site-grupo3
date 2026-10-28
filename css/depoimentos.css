@@ -1,16 +1,15 @@
-/* ==========================================================================
-   PRISMA CURSOS — SEÇÃO DE DEPOIMENTOS (css/depoimentos.css)
-   Referência: Protótipo de Alta Fidelidade no Figma (Grupo 3, nó 216-281) — Issue #9
-   Requisitos: RF06, RNF01, RNF04, RNF05, RNF06, RNF07
-   ========================================================================== */
-
 .depoimentos {
-    background-color: var(--color-surface);
-    padding-block: var(--section-spacing-y);
+    background-color: #000000; /* Força o fundo externo a ser preto absoluto */
+    padding-block: var(--space-8);
 }
 
 .depoimentos .depoimentos__container {
-    padding-inline: 0;
+    background-color: var(--color-surface); /* Cria o quadro cinza */
+    border-radius: 2rem;
+    padding-block: var(--space-8);
+    width: calc(100% - 32px);
+    max-width: 71rem;
+    margin-inline: auto;
 }
 
 /* Bloco do título: 66px de altura de referência e 37px até o início da grade (103px total) */
