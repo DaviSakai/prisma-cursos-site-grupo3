@@ -109,4 +109,3 @@ O desenvolvimento foi dividido em módulos focados e integrados através de Pull
 3. Abra o arquivo `index.html` diretamente no navegador, ou utilize a extensão **Live Server** (clique com o botão direito no `index.html` → *Open with Live Server*).
 4. Não há necessidade de instalar pacotes via gerenciadores de dependências, pois o projeto utiliza HTML, CSS e JS puros.
 
-Ficou do jeito que você queria para fazer o commit final na documentação?
