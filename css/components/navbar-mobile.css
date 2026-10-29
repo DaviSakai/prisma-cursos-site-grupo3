@@ -35,7 +35,8 @@
     max-width: var(--container-max-width);
     margin-inline: auto;
     padding: 0 var(--space-3);
-    background-color: color-mix(in srgb, var(--color-surface) 85%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(12.5px);
     border-radius: calc(var(--navbar-mobile-height) / 2);
     pointer-events: auto;
   }

@@ -256,7 +256,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
-    max-width: 68rem;
+    max-width: 75rem;
 }
 
 .sobre-nos-hero__title {
@@ -294,7 +294,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-4);
-    max-width: 68rem;
+    max-width: 75rem
 }
 
 .sobre-nos-partners__title {
@@ -316,7 +316,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--space-10);
-    max-width: 68rem;
+    max-width: 75rem;
 }
 
 .sobre-nos-values__title {
@@ -392,7 +392,7 @@
     box-shadow:
         0 0 42px rgba(255, 255, 255, 0.14),
         0 0 18px rgba(255, 255, 255, 0.08);
-    max-width: 64rem;
+    max-width: 100%;
     margin-inline: auto;
 }
 
@@ -422,7 +422,7 @@
 .sobre-nos-footer__list {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -434,6 +434,8 @@
     color: var(--color-white);
     text-decoration: none;
     transition: color var(--transition-fast);
+    padding: 0;
+    line-height: 1.2;
 }
 
 .sobre-nos-footer__link:hover {
@@ -640,7 +642,8 @@
     }
 
     .sobre-nos-footer__card {
-        grid-template-columns: 0.9fr 1.25fr 1.1fr 1.15fr;
+        grid-template-columns: 1fr 1.25fr 1.1fr 1.15fr;
+        justify-content: space-between;
         align-items: center;
         gap: var(--space-8);
         padding: 2.5rem 2.75rem;
