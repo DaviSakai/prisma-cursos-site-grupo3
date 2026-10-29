@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101010">
+    <meta name="theme-color" content="#000000">
 
     <title>Inscrição - Prisma Cursos</title>
+
+    <!-- Importação da fonte Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         /* =========================================
@@ -14,19 +19,27 @@
         ========================================= */
 
         :root {
-            --bg-dark: #101010;
+            --color-black: #000000;
             --card-bg: #d9d9d9;
             --darker-red: #3b0000;
-            --text-dark: #1a1a1a;
-            --text-light: #ffffff;
+            --color-text-inverse: #000000;
+            --color-text-primary: #FFFFFF;
             --focus-outline: #006fc9;
-            --cyan: #13AEF9;
+            --color-primary: #13AEF9;
             --glow-white: 0 0 15px rgba(255, 255, 255, 0.65);
             --glow-blue: 0 0 22px rgba(0, 150, 255, 0.75);
 
+            /* Cores de curso prisma */
+            --color-prism-red: #B80004;
+            --color-prism-green: #00B454;
+            --color-prism-purple: #9146FC;
+            --color-prism-orange: #F18D1A;
+            --color-prism-yellow: #C6BF00;
+            --color-prism-blue: #017BF6;
+
             /* Cor padrão: Desenvolvimento Fullstack */
-            --course-color: #900003;
-            --course-text: #ffffff;
+            --course-color: var(--color-prism-red);
+            --course-text: var(--color-text-primary);
         }
 
         /* =========================================
@@ -35,38 +48,38 @@
 
         /* Desenvolvimento Fullstack */
         body[data-course="fullstack"] {
-            --course-color: #900003;
-            --course-text: #ffffff;
+            --course-color: var(--color-prism-red);
+            --course-text: var(--color-text-primary);
         }
 
         /* Gestão Ágil de Projetos */
         body[data-course="gestao-agil"] {
-            --course-color: #009C49;
-            --course-text: #1a1a1a;
+            --course-color: var(--color-prism-green);
+            --course-text: var(--color-text-inverse);
         }
 
         /* Administração de Negócios */
         body[data-course="administracao"] {
-            --course-color: #644792;
-            --course-text: #ffffff;
+            --course-color: var(--color-prism-purple);
+            --course-text: var(--color-text-primary);
         }
 
         /* Data Analytics */
         body[data-course="data-analytics"] {
-            --course-color: #F18D1A;
-            --course-text: #1a1a1a;
+            --course-color: var(--color-prism-orange);
+            --course-text: var(--color-text-inverse);
         }
 
         /* UX/UI Design */
         body[data-course="ux-ui"] {
-            --course-color: #C5BE00;
-            --course-text: #1a1a1a;
+            --course-color: var(--color-prism-yellow);
+            --course-text: var(--color-text-inverse);
         }
 
         /* Design Gráfico */
         body[data-course="design-grafico"] {
-            --course-color: #0050A1;
-            --course-text: #ffffff;
+            --course-color: var(--color-prism-blue);
+            --course-text: var(--color-text-primary);
         }
 
         /* CONFIGURAÇÕES GERAIS */
@@ -89,9 +102,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-black);
+            color: var(--color-text-inverse);
+            font-family: "Montserrat", sans-serif;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -138,7 +151,7 @@
 
         .card-header h1 {
             margin: 0 0 0.75rem;
-            color: var(--text-dark);
+            color: var(--color-text-inverse);
             font-size: 0.9rem;
             font-weight: 700;
             line-height: 1.25;
@@ -158,8 +171,8 @@
             padding: 0.35rem 0.7rem;
             border: 1px solid transparent;
             border-radius: 999px;
-            background-color: var(--text-light);
-            color: var(--text-dark);
+            background-color: var(--color-text-primary);
+            color: var(--color-text-inverse);
             font: inherit;
             font-size: 0.875rem;
             font-weight: 600;
@@ -178,7 +191,7 @@
         }
 
         .form-control[aria-invalid="true"] {
-            border-color: var(--cyan);
+            border-color: var(--color-primary);
         }
 
         /* BOTÕES */
@@ -229,7 +242,7 @@
             padding: 0.5rem 0.65rem;
             border: 1px solid #bdbdbd;
             border-radius: 4px;
-            background: #ffffff;
+            background: var(--color-text-primary);
             color: #252525;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
             font-size: 0.875rem;
@@ -249,7 +262,7 @@
             left: 20px;
             width: 12px;
             height: 12px;
-            background: #ffffff;
+            background: var(--color-text-primary);
             border-top: 1px solid #bdbdbd;
             border-left: 1px solid #bdbdbd;
             transform: rotate(45deg);
@@ -265,8 +278,8 @@
             width: 28px;
             height: 28px;
             border-radius: 2px;
-            background-color: #13AEF9;
-            color: #ffffff;
+            background-color: var(--color-primary);
+            color: var(--color-text-primary);
             font-size: 1.15rem;
             font-weight: 800;
             line-height: 1;
@@ -307,7 +320,7 @@
             padding: 0.25rem 1.1rem;
             border-radius: 6px;
             background-color: var(--darker-red);
-            color: var(--text-light);
+            color: var(--color-text-primary);
             font-size: 0.8rem;
         }
 
@@ -500,7 +513,6 @@
                     Inscrição confirmada!
                 </h2>
 
-                <!-- ID adicionado aqui para permitir a alteração via JavaScript -->
                 <p id="successMessageText">
                     Fique de olho na sua caixa de entrada, acabamos de enviar
                     as informações para o e-mail cadastrado.
@@ -531,7 +543,6 @@
         document.addEventListener('DOMContentLoaded', () => {
 
             /* Referências aos campos */
-
             const nameInput = document.getElementById('userName');
             const phoneInput = document.getElementById('userPhone');
             const emailInput = document.getElementById('userEmail');
@@ -547,7 +558,7 @@
             const form = document.getElementById('registrationForm');
             const successState = document.getElementById('successState');
             const successStatus = document.getElementById('successStatus');
-            const successMessageText = document.getElementById('successMessageText'); // Nova referência
+            const successMessageText = document.getElementById('successMessageText');
             const regCard = document.getElementById('regCard');
             const btnBack = document.getElementById('btnBack');
 
@@ -562,7 +573,6 @@
             ]);
 
             /* Mostra ou oculta o aviso personalizado de um campo. */
-
             const setFieldError = (input, message = '') => {
                 const errorElement = errorElements[input.id];
                 const textElement =
@@ -579,7 +589,6 @@
             };
 
             /* Limpa todos os avisos. */
-
             const clearAllErrors = () => {
                 [
                     nameInput,
@@ -592,7 +601,6 @@
             };
 
             /* Máscara de telefone: (99) 99999-9999. */
-
             phoneInput.addEventListener('input', (event) => {
                 const digits = event.target.value
                     .replace(/\D/g, '')
@@ -624,7 +632,6 @@
             });
 
             /* Converte automaticamente o cupom para letras maiúsculas. */
-
             couponInput.addEventListener('input', () => {
                 const start = couponInput.selectionStart;
                 const end = couponInput.selectionEnd;
@@ -655,7 +662,6 @@
             });
 
             /* Define a mensagem de erro para cada campo. */
-
             const getValidationMessage = (input) => {
                 const value = input.value.trim();
 
@@ -701,7 +707,6 @@
             };
 
             /* Valida um campo e apresenta o aviso quando necessário. */
-
             const validateSingleField = (input) => {
                 const message = getValidationMessage(input);
                 setFieldError(input, message);
@@ -709,7 +714,6 @@
             };
 
             /* Atualiza os erros de nome e e-mail quando o usuário digita. */
-
             [nameInput, emailInput].forEach((input) => {
                 input.addEventListener('input', () => {
                     if (
@@ -722,7 +726,6 @@
             });
 
             /* Atualiza o aviso ao sair de um campo que já apresentou erro. */
-
             [
                 nameInput,
                 phoneInput,
@@ -740,7 +743,6 @@
             });
 
             /* Envio do formulário e validação personalizada. */
-
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
 
@@ -755,7 +757,6 @@
                 ];
 
                 /* Interrompe no primeiro campo inválido. */
-
                 for (const input of fields) {
                     if (!validateSingleField(input)) {
                         input.focus();
@@ -764,7 +765,6 @@
                 }
 
                 /* Lógica de verificação do cupom e definição da mensagem final */
-                
                 const baseMessage = 'Fique de olho na sua caixa de entrada, acabamos de enviar as informações para o e-mail cadastrado.';
                 
                 if (couponInput.value.trim() !== '') {
@@ -777,7 +777,6 @@
                 }
 
                 /* Exibe a tela de confirmação. */
-
                 form.classList.add('hidden');
                 form.setAttribute('aria-hidden', 'true');
 
@@ -790,7 +789,6 @@
             });
 
             /* Volta ao formulário e limpa os campos e avisos. */
-
             btnBack.addEventListener('click', () => {
                 successState.classList.add('hidden');
                 successState.setAttribute('aria-hidden', 'true');
