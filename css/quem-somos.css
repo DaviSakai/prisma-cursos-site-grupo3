@@ -1,0 +1,651 @@
+/* ==========================================================================
+   PRISMA CURSOS — SEÇÃO INSTITUCIONAL E PÁGINA SOBRE NÓS (css/quem-somos.css)
+   Referência: Protótipo de Alta Fidelidade no Figma (Grupo 3) — Issue #6
+   Requisitos: RF04, RNF01, RNF02, RNF04, RNF05, RNF06, RNF07
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. REALCES DE BRILHO (GLOW) FIÉIS AO PROTÓTIPO DO FIGMA
+   -------------------------------------------------------------------------- */
+.btn--primary {
+    border: 1.5px solid rgba(255, 255, 255, 0.48);
+    box-shadow:
+        0 0 18px rgba(19, 174, 249, 0.78),
+        0 0 36px rgba(19, 174, 249, 0.42),
+        inset 0 0 8px rgba(255, 255, 255, 0.48);
+}
+
+.btn--primary:hover:not(:disabled):not([aria-disabled="true"]) {
+    border-color: rgba(255, 255, 255, 0.72);
+    box-shadow:
+        0 0 24px rgba(19, 174, 249, 0.95),
+        0 0 48px rgba(19, 174, 249, 0.65),
+        inset 0 0 10px rgba(255, 255, 255, 0.65);
+    transform: translateY(-2px);
+}
+
+.hero__title {
+    text-shadow: 0 0 22px rgba(19, 174, 249, 0.38);
+}
+
+.hero__image {
+    filter: drop-shadow(0 0 24px rgba(19, 174, 249, 0.22));
+}
+
+.hero__partners-bar {
+    box-shadow:
+        0 8px 32px rgba(255, 255, 255, 0.12),
+        0 0 20px rgba(255, 255, 255, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   1. SEÇÃO "POR QUE NOS ESCOLHER?" NA HOME (index.html #sobre-nos)
+   -------------------------------------------------------------------------- */
+.quem-somos {
+    position: relative;
+    padding-block: var(--section-spacing-y);
+    background-color: var(--color-background);
+    background-image: radial-gradient(
+        ellipse 42% 36% at 14% 38%,
+        rgba(5, 44, 63, 0.88) 0%,
+        rgba(3, 31, 44, 0.42) 48%,
+        rgba(0, 0, 0, 0) 92%
+    );
+}
+
+.quem-somos__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+.quem-somos__differentials {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+/* Ilustração com cartões translúcidos e esferas luminosas */
+.quem-somos__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 28rem;
+    margin-inline: auto;
+}
+
+.quem-somos__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 28px rgba(19, 174, 249, 0.28));
+}
+
+/* Coluna de conteúdo (Título + 3 Cards Escuros + CTA com brilho) */
+.quem-somos__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    width: 100%;
+    max-width: 31rem;
+    margin-inline: auto;
+}
+
+.quem-somos__title {
+    font-size: clamp(1.875rem, 1.45rem + 1.6vw, 2.625rem);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+    letter-spacing: var(--letter-spacing-tight);
+    text-align: center;
+    text-shadow: 0 0 22px rgba(19, 174, 249, 0.42);
+}
+
+.quem-somos__pillars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quem-somos__pillar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: 1.125rem 1.5rem;
+    background-color: #1B1B1B;
+    color: var(--color-white);
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 0 24px rgba(255, 255, 255, 0.05),
+        0 6px 18px rgba(0, 0, 0, 0.65);
+    text-align: left;
+    transition:
+        transform var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.quem-somos__pillar:hover {
+    transform: translateY(-2px);
+    border-color: rgba(19, 174, 249, 0.35);
+    box-shadow:
+        0 0 26px rgba(19, 174, 249, 0.16),
+        0 8px 22px rgba(0, 0, 0, 0.7);
+}
+
+.quem-somos__pillar-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-snug);
+    color: #CCCCCC;
+    margin: 0;
+}
+
+.quem-somos__pillar-text {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.45;
+    color: #B8B8B8;
+    margin: 0;
+}
+
+.quem-somos__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-3);
+}
+
+.quem-somos__cta {
+    min-width: 14.5rem;
+    font-weight: var(--font-weight-medium);
+}
+
+/* Bloco "Nosso valores" com borda neon ciano e brilho intenso */
+.quem-somos__values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.quem-somos__values-title {
+    font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+    text-align: center;
+    text-shadow: 0 0 18px rgba(19, 174, 249, 0.4);
+    margin: 0;
+}
+
+.quem-somos__values-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    width: 100%;
+    max-width: 58rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quem-somos__value-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.75rem 2rem;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    border-radius: 1.375rem;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    box-shadow:
+        0 0 18px rgba(19, 174, 249, 0.78),
+        0 0 36px rgba(19, 174, 249, 0.38),
+        inset 0 0 12px rgba(19, 174, 249, 0.22);
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.quem-somos__value-item:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 24px rgba(19, 174, 249, 0.95),
+        0 0 48px rgba(19, 174, 249, 0.55),
+        inset 0 0 16px rgba(19, 174, 249, 0.32);
+}
+
+/* --------------------------------------------------------------------------
+   2. PÁGINA DEDICADA "SOBRE NÓS" (pages/sobre-nos.html)
+   -------------------------------------------------------------------------- */
+.sobre-nos-body {
+    background-color: var(--color-background);
+    background-image: radial-gradient(
+        ellipse 90% 46% at 50% 22%,
+        #052C3F 0%,
+        #031823 52%,
+        #000000 88%
+    );
+    background-repeat: no-repeat;
+}
+
+.sobre-nos-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding-bottom: var(--space-16);
+}
+
+/* Seção 1: Sobre Nós — História e Ensino Híbrido */
+.sobre-nos-hero {
+    padding-top: calc(var(--header-height) + var(--space-4));
+}
+
+.sobre-nos-hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    max-width: 75rem;
+}
+
+.sobre-nos-hero__title {
+    font-size: clamp(2.25rem, 1.8rem + 2vw, 3.25rem);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    color: var(--color-primary);
+    letter-spacing: var(--letter-spacing-tight);
+    text-shadow:
+        0 0 24px rgba(1, 123, 246, 0.78),
+        0 0 10px rgba(19, 174, 249, 0.45);
+}
+
+.sobre-nos-hero__story {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.sobre-nos-hero__paragraph {
+    font-size: clamp(1rem, 0.92rem + 0.4vw, 1.25rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.58;
+    color: var(--color-white);
+}
+
+.sobre-nos-hero__highlight {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Seção 2: Parceiros */
+.sobre-nos-partners__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    max-width: 75rem
+}
+
+.sobre-nos-partners__title {
+    font-size: clamp(1.25rem, 1.1rem + 0.4vw, 1.5rem);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.sobre-nos-partners__bar {
+    box-shadow:
+        0 10px 34px rgba(255, 255, 255, 0.14),
+        0 0 22px rgba(255, 255, 255, 0.08);
+}
+
+/* Seção 3: Nossos Valores Detalhados */
+.sobre-nos-values__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-10);
+    max-width: 75rem;
+}
+
+.sobre-nos-values__title {
+    font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.375rem);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.sobre-nos-values__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-nos-values__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: 2.25rem 1.75rem;
+    background-color: var(--color-surface);
+    border: 1.5px solid var(--color-primary);
+    border-radius: 1.25rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(19, 174, 249, 0.18);
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.sobre-nos-values__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px rgba(19, 174, 249, 0.38);
+}
+
+.sobre-nos-values__card-title {
+    font-size: clamp(1.25rem, 1.1rem + 0.4vw, 1.5rem);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sobre-nos-values__card-text {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.45;
+    color: #EAEAEA;
+    margin: 0;
+}
+
+/* Seção 4: Rodapé / Contato Institucional */
+.sobre-nos-footer {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-16);
+}
+
+.sobre-nos-footer__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    padding: var(--space-8) var(--space-6);
+    background-color: var(--color-surface);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    box-shadow:
+        0 0 42px rgba(255, 255, 255, 0.14),
+        0 0 18px rgba(255, 255, 255, 0.08);
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.sobre-nos-footer__nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.sobre-nos-footer__nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.sobre-nos-footer__heading {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.sobre-nos-footer__heading--center {
+    text-align: center;
+}
+
+.sobre-nos-footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-nos-footer__link {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    padding: 0;
+    line-height: 1.2;
+}
+
+.sobre-nos-footer__link:hover {
+    color: var(--color-primary);
+}
+
+/* Coluna de Contatos (Badges Ciano) */
+.sobre-nos-footer__contacts-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.sobre-nos-footer__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sobre-nos-footer__contact-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.375rem 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border-radius: 0.375rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(19, 174, 249, 0.35);
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.sobre-nos-footer__contact-badge:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-black);
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(19, 174, 249, 0.6);
+}
+
+.sobre-nos-footer__contact-badge span {
+    flex: 1;
+    text-align: center;
+}
+
+.sobre-nos-footer__contact-icon {
+    flex-shrink: 0;
+}
+
+/* Coluna do Mini Formulário */
+.sobre-nos-footer__form-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-nos-footer__form-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background-color: #161616;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sobre-nos-footer__form-title {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    text-align: center;
+    margin: 0;
+}
+
+.sobre-nos-footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.sobre-nos-footer__input,
+.sobre-nos-footer__textarea {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border: none;
+    border-radius: 0.375rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(19, 174, 249, 0.28);
+}
+
+.sobre-nos-footer__input::placeholder,
+.sobre-nos-footer__textarea::placeholder {
+    color: var(--color-black);
+    opacity: 0.9;
+}
+
+.sobre-nos-footer__textarea {
+    resize: none;
+    min-height: 4.75rem;
+}
+
+.sobre-nos-footer__submit {
+    align-self: center;
+    padding: 0.3125rem 1.25rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border: none;
+    border-radius: 0.375rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(19, 174, 249, 0.4);
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.sobre-nos-footer__submit:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(19, 174, 249, 0.7);
+}
+
+/* Coluna da Marca / Grupo */
+.sobre-nos-footer__brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-5);
+    text-align: center;
+}
+
+.sobre-nos-footer__corp {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.sobre-nos-footer__corp-label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+}
+
+.sobre-nos-footer__corp-name {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+}
+
+.sobre-nos-footer__brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   3. BREAKPOINTS RESPONSIVOS (Tablet 768px e Desktop 1024px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+    .quem-somos__values-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-8);
+    }
+
+    .sobre-nos-values__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-6);
+    }
+
+    .sobre-nos-footer__card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: var(--space-10) var(--space-8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .quem-somos__differentials {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: var(--space-12);
+        align-items: center;
+    }
+
+    .quem-somos__media {
+        max-width: 30rem;
+    }
+
+    .quem-somos__title {
+        text-align: left;
+    }
+
+    .sobre-nos-footer__card {
+        grid-template-columns: 1fr 1.25fr 1.1fr 1.15fr;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-8);
+        padding: 2.5rem 2.75rem;
+    }
+}

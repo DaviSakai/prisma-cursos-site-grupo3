@@ -1,0 +1,38 @@
+main {
+    padding-top: var(--navbar-height);
+}
+
+.catalogo__grid .card__title {
+    font-size: 24px; 
+    margin-bottom: 0px; 
+    line-height: 1; 
+    
+}
+.catalogo__grid .card__description {
+    margin-top: 0;
+    line-height: 1;
+}
+
+.catalogo__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+.catalogo__grid .card {
+    padding: 24px;
+    overflow: hidden;
+}
+
+.catalogo__grid .card__body {
+    padding: 12px 0px 0px 12px; 
+}
+
+.catalogo__grid .card__footer {
+    padding: 0 12px 0px 12px;
+}
+
+@media (max-width: 1023px) {
+    .catalogo__grid {
+        grid-template-columns: 1fr;
+    }
+}

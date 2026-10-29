@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding-block: var(--space-10);
+    padding-block: var(--header-padding-y);
     pointer-events: none;
 }
 
@@ -19,20 +19,22 @@
 .navbar__menu {
     display: flex;
     align-items: center;
-    height: 4rem;
+    height: var(--navbar-height);
     border-radius: var(--radius-full);
     pointer-events: auto;
 }
 
 .navbar__symbol {
     padding: 0 0.625rem;
-    background-color: color-mix(in srgb, var(--color-surface) 40%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(12.5px);
 }
 
 .navbar__menu {
     gap: var(--space-10);
     padding: 0 var(--space-5);
     background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(12.5px);
 }
 
 .navbar__symbol img,

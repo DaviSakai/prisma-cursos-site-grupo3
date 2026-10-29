@@ -1,0 +1,455 @@
+/* Teste vocacional: interface (Issue 13)
+   Os aliases abaixo apontam para os tokens do projeto; se o nome de algum
+   token for diferente, troque apenas aqui. O valor após a vírgula é reserva. */
+.quiz {
+  --quiz-azul: var(--color-primary, #12a8f5);
+  --quiz-fundo: var(--color-black, #000);
+  --quiz-branco: var(--color-white, #fff);
+  --quiz-texto-escuro: var(--color-text-dark, #0a0a0a);
+  --quiz-foco: var(--color-focus-ring, #ffd84d);
+  --quiz-erro: #ff8a8a;
+
+  min-height: 100vh;
+  padding: 7rem 1.5rem 3rem; /* topo reserva o header fixo */
+  background-color: var(--quiz-fundo);
+  color: var(--quiz-branco);
+  font-family: var(--font-family-base, "Montserrat", system-ui, sans-serif);
+}
+
+.quiz [hidden] {
+  display: none !important;
+}
+
+.quiz__container {
+  width: 100%;
+  max-width: 56rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.quiz__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.quiz__titulo {
+  margin: 0 0 0.25rem;
+  color: var(--quiz-azul);
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+  font-weight: 600;
+}
+
+/* ---------- Etapa ---------- */
+.quiz__etapa {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.quiz__pergunta {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  font-size: clamp(1.375rem, 1rem + 2vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.quiz__progresso-texto {
+  margin: 0 0 1rem;
+  font-size: clamp(0.8125rem, 0.75rem + 0.3vw, 1rem);
+}
+
+.quiz__progresso {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  max-width: 28rem;
+  list-style: none;
+}
+
+.quiz__segmento {
+  flex: 1;
+  height: 0.5rem;
+  background-color: var(--quiz-branco);
+  border-radius: 999px;
+}
+
+.quiz__segmento.is-preenchido {
+  background-color: var(--quiz-azul);
+}
+
+/* ---------- Alternativas ---------- */
+.quiz__opcoes {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quiz__opcao {
+  position: relative;
+}
+
+/* Radio nativo: fora da vista, mas continua focável e operável por teclado */
+.quiz__radio {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.quiz__cartao {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 5rem;
+  padding: 1rem 3.25rem 1rem 1rem;
+  background-color: var(--quiz-branco);
+  color: var(--quiz-texto-escuro);
+  border: 3px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.quiz__cartao:hover {
+  border-color: var(--quiz-azul);
+}
+
+.quiz__letra {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--quiz-azul);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.quiz__texto {
+  flex: 1;
+  font-size: clamp(0.9375rem, 0.85rem + 0.4vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Selecionada: borda azul grossa + marca de check (não depende só de cor) */
+.quiz__radio:checked + .quiz__cartao {
+  border-color: var(--quiz-azul);
+  box-shadow: 0 0 0 3px var(--quiz-azul);
+}
+
+.quiz__radio:checked + .quiz__cartao::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: var(--quiz-azul);
+  border-radius: 50%;
+  color: var(--quiz-texto-escuro);
+  font-size: 1rem;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+.quiz__radio:focus-visible + .quiz__cartao {
+  outline: 3px solid var(--quiz-foco);
+  outline-offset: 3px;
+}
+
+/* ---------- Mensagem de erro (preenchida pela Issue 14) ---------- */
+.quiz__erro {
+  margin: 0 0 1rem;
+  color: var(--quiz-erro);
+  font-weight: 600;
+}
+
+/* ---------- Botões ---------- */
+.quiz__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.quiz__botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 500;
+  color: var(--quiz-texto-escuro);
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.quiz__botao--primario {
+  background-color: var(--quiz-azul);
+}
+.quiz__botao--secundario {
+  background-color: var(--quiz-branco);
+}
+.quiz__botao:hover {
+  filter: brightness(0.92);
+}
+
+.quiz__botao:focus-visible {
+  outline: 3px solid var(--quiz-foco);
+  outline-offset: 3px;
+}
+
+/* ---------- Resultado (estrutura) ---------- */
+.quiz__resultado {
+  padding-top: 1rem;
+}
+.quiz__resultado:focus {
+  outline: none;
+}
+.quiz__resultado-rotulo {
+  margin: 0 0 0.5rem;
+  color: var(--quiz-azul);
+  font-weight: 600;
+}
+.quiz__resultado-titulo {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+}
+.quiz__resultado-texto {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+/* ---------- Telas pequenas ---------- */
+@media (max-width: 480px) {
+  .quiz {
+    padding-inline: 1rem;
+  }
+  .quiz__cartao {
+    gap: 0.75rem;
+    padding-right: 2.75rem;
+  }
+  .quiz__letra {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz__cartao,
+  .quiz__botao {
+    transition: none;
+  }
+}
+
+/* ---------- Resultado (Issue 14): cole no FINAL de css/teste-vocacional.css ---------- */
+.quiz__res-intro {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.quiz__res-area-nome {
+  margin: 0 0 0.5rem;
+  color: var(--quiz-azul);
+  font-size: clamp(1.75rem, 1.2rem + 2.5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.quiz__res-subtitulo {
+  margin: 0 0 1.5rem;
+  font-size: clamp(1.0625rem, 0.95rem + 0.6vw, 1.5rem);
+  font-weight: 500;
+}
+
+.quiz__res-bloco {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.quiz__res-texto {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.quiz__res-imagem {
+  width: 100%;
+  max-height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.quiz__res-secao {
+  margin: 2rem 0 1rem;
+  color: var(--quiz-azul);
+  font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem);
+  font-weight: 600;
+}
+
+.quiz__res-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz__res-tags li {
+  padding: 0.35rem 1rem;
+  background-color: var(--quiz-azul);
+  color: var(--quiz-texto-escuro);
+  border-radius: 0.6rem;
+  font-weight: 600;
+}
+
+.quiz__res-cursos {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz__res-curso {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.quiz__res-curso-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.quiz__res-curso-rodape {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem 0.75rem;
+  margin-top: auto;
+}
+
+.quiz__res-curso-nome {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.quiz__res-curso-descricao {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+}
+
+.quiz__res-curso-link {
+  padding: 0.4rem 1rem;
+  background-color: #0a0a0a;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.quiz__res-curso-link:focus-visible,
+.quiz__res-link-cursos:focus-visible {
+  outline: 3px solid var(--quiz-foco);
+  outline-offset: 3px;
+}
+
+.quiz__res-cupom {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.35rem 1.5rem;
+  background-color: var(--quiz-branco);
+  color: var(--quiz-texto-escuro);
+  border-radius: 999px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.quiz__res-cupom-texto {
+  max-width: 40rem;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+.quiz__res-lista {
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;
+}
+
+.quiz__res-lista li + li {
+  margin-top: 0.5rem;
+}
+
+.quiz__res-link-cursos {
+  color: var(--quiz-branco);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.quiz__resultado > .quiz__acoes {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .quiz__res-bloco {
+    grid-template-columns: 1fr 1.4fr;
+  }
+  .quiz__res-texto {
+    text-align: center;
+  }
+  .quiz__res-cursos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* No resultado o Figma não mostra "Teste de perfil profissional" nem "Descubra seu caminho".
+   Ficam só para leitores de tela, para manter o título principal da página. */
+.quiz--resultado .quiz__eyebrow,
+.quiz--resultado .quiz__titulo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

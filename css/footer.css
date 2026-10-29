@@ -1,0 +1,321 @@
+/* ==========================================================================
+   PRISMA CURSOS — COMPONENTE DE RODAPÉ PADRÃO (css/footer.css)
+   Referência: Protótipo de Alta Fidelidade no Figma (Grupo 3) — Issue #10
+   Requisitos: RF07 (Informações de Contato), RF08 (Formulário de Contato)
+   ========================================================================== */
+
+/* ---------- Container Geral do Rodapé ---------- */
+.site-footer {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-16);
+    background-color: var(--color-background);
+}
+
+/* ---------- Card Principal (Superfície Flutuante com Glow) ---------- */
+.site-footer__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    padding: var(--space-8) var(--space-6);
+    background-color: var(--color-surface);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    box-shadow:
+        0 0 42px rgba(255, 255, 255, 0.14),
+        0 0 18px rgba(255, 255, 255, 0.08);
+    max-width: 64rem;
+    margin-inline: auto;
+}
+
+/* ==========================================================================
+   COLUNA 1: LINKS DE NAVEGAÇÃO E ÁREAS
+   ========================================================================== */
+.site-footer__nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.site-footer__nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.site-footer__heading {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.site-footer__heading--center {
+    text-align: center;
+}
+
+.site-footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer__link {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.site-footer__link:hover {
+    color: var(--color-primary);
+}
+
+.site-footer__link:focus-visible {
+    outline: var(--border-width-thick) solid var(--color-focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   COLUNA 2: BADGES DE CONTATO (CIANO COM BRILHO)
+   ========================================================================== */
+.site-footer__contacts-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.site-footer__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer__contact-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0.375rem 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border-radius: 0.375rem;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(19, 174, 249, 0.35);
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.site-footer__contact-badge:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-black);
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(19, 174, 249, 0.6);
+}
+
+.site-footer__contact-badge:focus-visible {
+    outline: var(--border-width-thick) solid var(--color-white);
+    outline-offset: 2px;
+}
+
+.site-footer__contact-badge span {
+    flex: 1;
+    text-align: center;
+}
+
+.site-footer__contact-icon {
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   COLUNA 3: MINI FORMULÁRIO DE CONTATO
+   ========================================================================== */
+.site-footer__form-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer__form-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background-color: #161616;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-footer__form-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    text-align: center;
+    margin: 0;
+}
+
+.site-footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.site-footer__input,
+.site-footer__textarea {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border: none;
+    border-radius: 0.375rem;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(19, 174, 249, 0.28);
+    transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.site-footer__input::placeholder,
+.site-footer__textarea::placeholder {
+    color: var(--color-black);
+    opacity: 0.9;
+}
+
+.site-footer__input:focus,
+.site-footer__textarea:focus {
+    outline: 2px solid var(--color-white);
+    outline-offset: 1px;
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 0 14px rgba(19, 174, 249, 0.55);
+}
+
+.site-footer__textarea {
+    resize: none;
+    min-height: 4.75rem;
+}
+
+.site-footer__submit {
+    align-self: center;
+    padding: 0.3125rem 1.25rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    border: none;
+    border-radius: 0.375rem;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(19, 174, 249, 0.4);
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.site-footer__submit:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 0 18px rgba(19, 174, 249, 0.7);
+}
+
+.site-footer__submit:focus-visible {
+    outline: var(--border-width-thick) solid var(--color-white);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   COLUNA 4: MARCA E GRUPO
+   ========================================================================== */
+.site-footer__brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-5);
+    text-align: center;
+}
+
+.site-footer__corp {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.site-footer__corp-label {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.site-footer__corp-name {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    margin: 0;
+}
+
+.site-footer__brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+}
+
+.site-footer__brand-symbol,
+.site-footer__brand-text {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   BREAKPOINTS RESPONSIVOS (Tablet 768px e Desktop 1024px+)
+   ========================================================================== */
+
+/* Tablet: Transição para 2 Colunas */
+@media (min-width: 768px) {
+    .site-footer__card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: var(--space-10) var(--space-8);
+    }
+}
+
+/* Desktop: 4 Colunas Proporcionais Alinhadas */
+@media (min-width: 1024px) {
+    .site-footer__card {
+        grid-template-columns: 0.9fr 1.25fr 1.1fr 1.15fr;
+        align-items: center;
+        gap: var(--space-8);
+        padding: 2.5rem 2.75rem;
+    }
+}
+
+/* Acessibilidade: Movimento Reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .site-footer__link,
+    .site-footer__contact-badge,
+    .site-footer__submit,
+    .site-footer__input,
+    .site-footer__textarea {
+        transition: none;
+        transform: none;
+    }
+}

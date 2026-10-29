@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web Fullstack - Prisma Cursos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components/typography.css">
+    <link rel="stylesheet" href="../css/components/buttons.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/components/navbar-mobile.css">
+    <link rel="stylesheet" href="../css/curso-detalhes.css"> 
+    <link rel="stylesheet" href="../css/quem-somos.css" /> 
+     <link rel="stylesheet" href="../css/footer.css" />
+    <style>
+    .sobre-nos-footer__link:hover {
+            color: var(--color-prism-orange) !important;
+        }
+
+        .sobre-nos-footer__contact-badge {
+            background-color: var(--color-prism-orange) !important;
+        }
+
+        .sobre-nos-footer__contact-badge:hover {
+            box-shadow: 0 0 18px rgba(241, 141, 26, 0.6) !important;
+        }
+
+        .sobre-nos-footer__input,
+        .sobre-nos-footer__textarea,
+        .sobre-nos-footer__submit {
+            background-color: var(--color-prism-orange) !important;
+        }
+
+        .sobre-nos-footer__submit:hover {
+            box-shadow: 0 0 18px rgba(241, 141, 26, 0.6) !important;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegação principal">
+            <div class="navbar__symbol">
+                <img src="../assets/images/logo-prisma-simbolo.svg" alt="" width="136" height="52">
+            </div>
+            <div class="navbar__menu">
+                <a href="../index.html#inicio" class="navbar__logo">
+                    <img src="../assets/images/logo-prisma-texto.svg" alt="Prisma Cursos" width="120" height="44">
+                </a>
+                <button
+                    class="navbar__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="menu-principal"
+                    aria-label="Abrir menu"
+                    data-menu-toggle
+                >
+                    <span class="navbar__toggle-bar"></span>
+                    <span class="navbar__toggle-bar"></span>
+                    <span class="navbar__toggle-bar"></span>
+                </button>
+                <ul class="navbar__links" id="menu-principal" data-menu>
+                    <li><a href="../index.html#inicio" class="navbar__link">Início</a></li>
+                    <li><a href="sobre-nos.html" class="navbar__link">Sobre nós</a></li>
+                     <li><a href="cursos.html" class="navbar__link">Cursos</a></li>
+                    <li><a href="../index.html#depoimentos" class="navbar__link">Depoimentos</a></li>
+                    <li><a href="../index.html#contato" class="navbar__link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>        
+    </header>
+
+    <main class="curso-page curso--orange">
+        <section class="curso-hero section">
+            <div class="container curso-hero__container">
+                <div class="curso-hero__content">
+                    <h1 class="curso-hero__title">Análise de Dados</h1>
+                    <div class="curso-hero__description text-body">
+                        <p>O curso de Análise de Dados prepara profissionais para transformar grandes volumes de dados em informações úteis para a tomada de decisões. Ao longo da formação, os alunos aprendem a coletar, organizar, analisar e interpretar dados, utilizando ferramentas como Excel, SQL, Python e Power BI para identificar padrões, acompanhar indicadores e criar relatórios visuais.</p>
+                        <p>Com foco em aplicações reais e resolução de problemas empresariais, o curso é indicado tanto para quem deseja iniciar uma carreira na área de tecnologia quanto para profissionais que buscam migrar de setores como administração, marketing, vendas e finanças para o universo dos dados.</p>
+                    </div>
+                    
+                    <div class="curso-hero__badges">
+                        <div class="curso-badge">
+                            <div class="curso-badge__header">
+                                <img src="../assets/icons/icon-certificado.svg" alt="" aria-hidden="true">
+                                <strong>Certificado</strong>
+                            </div>
+                            <span>Ao concluir o curso, você receberá um certificado de conclusão.</span>
+                        </div>
+                        <div class="curso-badge">
+                            <div class="curso-badge__header">
+                                <img src="../assets/icons/icon-hibrido.svg" alt="" aria-hidden="true">
+                                <strong>Modalidade</strong>
+                            </div>
+                            <span>Híbrido</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="curso-hero__form-wrapper">
+                    <h3 class="curso-form__title">Faça sua inscrição para o curso</h3>
+                    
+                    <!-- ESTADO 1: Formulário -->
+                    <form class="curso-form" id="cursoForm" action="#" method="POST">
+                        <input type="text" name="nome" placeholder="Nome" aria-label="Nome" required>
+                        <input type="tel" name="telefone" placeholder="Telefone" aria-label="Telefone" required>
+                        <input type="email" name="email" placeholder="E-mail" aria-label="E-mail" required>
+                        <input type="text" name="cupom" placeholder="Cupom" aria-label="Cupom">
+                        <button type="submit" class="btn btn--theme">Inscreva-se</button>
+                    </form>
+
+                    <!-- ESTADO 2: Sucesso (Oculto por padrão) -->
+                    <div class="curso-form__success" id="formSuccess" style="display: none;">
+                        <div class="success-card">
+                            <h4>Inscrição confirmada!</h4>
+                            <p>Fique de olho na sua caixa de entrada, acabamos de enviar as informações para o e-mail cadastrado.</p>
+                            <button type="button" class="btn btn--dark" id="btnVoltar">Voltar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="curso-matriz section">
+            <div class="container">
+                <div class="matriz__surface">
+                    <div class="matriz__grid">
+                        
+                        <article class="semestre-item">
+                            <h4 class="semestre-item__title">1º semestre</h4>
+                            <div class="semestre-item__content">
+                                <ol>
+                                    <li>Introdução à análise de dados.</li>
+                                    <li>Excel e Google Sheets.</li>
+                                    <li>Matemática e estatística básica.</li>
+                                    <li>Organização, limpeza e interpretação de dados.</li>
+                                </ol>
+                            </div>
+                        </article>
+
+                        <article class="semestre-item">
+                            <h4 class="semestre-item__title">2º semestre</h4>
+                            <div class="semestre-item__content">
+                                <ol>
+                                    <li>Consultas a bancos de dados com SQL.</li>
+                                    <li>Lógica de programação com Python</li>
+                                    <li>Manipulação de dados com Pandas.</li>
+                                    <li>Análise exploratória e identificação de padrões.</li>
+                                </ol>
+                            </div>
+                        </article>
+                        
+                        <article class="semestre-item">
+                            <h4 class="semestre-item__title">3º semestre</h4>
+                            <div class="semestre-item__content">
+                                <ol>
+                                    <li>Power BI e construção de dashboards.</li>
+                                    <li>Gráficos e comunicação visual de dados.</li>
+                                    <li>Indicadores de desempenho (KPIs).</li>
+                                    <li>Análise de resultados e métricas de negócio.</li>
+                                </ol>
+                            </div>
+                        </article>
+                        
+                        <article class="semestre-item">
+                            <h4 class="semestre-item__title">4º semestre</h4>
+                            <div class="semestre-item__content">
+                                <ol>
+                                    <li>Análises completas com dados reais.</li>
+                                    <li>Estatística aplicada à tomada de decisões.</li>
+                                    <li>Elaboração de relatórios e apresentações.</li>
+                                    <li>Portfólio, currículo e preparação para entrevistas.</li>
+                                </ol>
+                            </div>
+                        </article>
+
+                        <article class="semestre-item">
+                            <h4 class="semestre-item__title">5º semestre</h4>
+                            <div class="semestre-item__content">
+                                <ol>
+                                    <li>Estatística aplicada e análise preditiva.</li>
+                                    <li>Introdução ao aprendizado de máquina (Machine Learning).</li>
+                                    <li>Automação de relatórios e processos com Python.</li>
+                                    <li>Modelagem de dados e consultas SQL avançadas.</li>
+                                </ol>
+                            </div>
+                        </article>
+
+                        <article class="semestre-item">
+                            <h4 class="semestre-item__title">6º semestre</h4>
+                            <div class="semestre-item__content">
+                                <ol>
+                                    <li>Indicadores estratégicos e tomada de decisão.</li>
+                                    <li>Projeto de análise com dados reais.</li>
+                                    <li>Storytelling com dados e apresentação de resultados.</li>
+                                    <li>Portfólio, estudos de caso e preparação para entrevistas.</li>
+                                </ol>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contato" class="sobre-nos-footer" aria-label="Rodapé e Contato Institucional">
+        <div class="container">
+            <div class="sobre-nos-footer__card">
+                <div class="sobre-nos-footer__nav-col">
+                    <div class="sobre-nos-footer__nav-group">
+                        <h2 class="sobre-nos-footer__heading">Institucional</h2>
+                        <ul class="sobre-nos-footer__list" role="list">
+                            <li><a href="../index.html#inicio" class="sobre-nos-footer__link">Início</a></li>
+                            <li><a href="sobre-nos.html#sobre-nos-historia" class="sobre-nos-footer__link">Nossa história</a></li>
+                            <li><a href="../index.html#inicio" class="sobre-nos-footer__link">Parceiros</a></li>
+                            <li><a href="sobre-nos.html#valores" class="sobre-nos-footer__link">Valores</a></li>
+                        </ul>
+                    </div>
+
+                     <div class="sobre-nos-footer__nav-group">
+                        <h2 class="sobre-nos-footer__heading">Nossas Áreas de Atuação</h2>
+                        <ul class="sobre-nos-footer__list" role="list">
+                            <li><a href="../pages/cursos.html#tecnologia" class="sobre-nos-footer__link">Tecnologia</a></li>
+                            <li><a href="../pages/cursos.html#design" class="sobre-nos-footer__link">Design</a></li>
+                            <li><a href="../pages/cursos.html#gestao" class="sobre-nos-footer__link">Gestão</a></li>
+                            <li><a href="../pages/teste-vocacional.html" class="sobre-nos-footer__link">Faça o teste vocacional</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sobre-nos-footer__contacts-col">
+                    <h2 class="sobre-nos-footer__heading sobre-nos-footer__heading--center">Contatos</h2>
+                    <ul class="sobre-nos-footer__contacts-list" role="list">
+                        <li>
+                            <a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer" class="sobre-nos-footer__contact-badge">
+                                <svg class="sobre-nos-footer__contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                                <span>(61) 99999-9999</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="sobre-nos-footer__contact-badge">
+                                <svg class="sobre-nos-footer__contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="3" ry="3"></rect>
+                                    <line x1="8" y1="11" x2="8" y2="16"></line>
+                                    <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                                    <path d="M12 16v-5"></path>
+                                    <path d="M16 16v-3a2 2 0 0 0-4 0"></path>
+                                </svg>
+                                <span>prisma cursos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="sobre-nos-footer__contact-badge">
+                                <svg class="sobre-nos-footer__contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                <span>@prisma.cursos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:prisma.cursos@gmail.com" class="sobre-nos-footer__contact-badge">
+                                <svg class="sobre-nos-footer__contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                                <span>prisma.cursos@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contato" class="sobre-nos-footer__contact-badge">
+                                <svg class="sobre-nos-footer__contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>SGAN 914 - Ed Prisma | DF</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sobre-nos-footer__form-col">
+                    <div class="sobre-nos-footer__form-box">
+                        <h2 class="sobre-nos-footer__form-title">Nos envie uma mensagem</h2>
+                        <form id="form-rodape" class="sobre-nos-footer__form" action="#contato" method="get">
+                            <input
+                                type="text"
+                                name="nome"
+                                class="sobre-nos-footer__input"
+                                placeholder="Nome"
+                                aria-label="Nome"
+                                required
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                class="sobre-nos-footer__input"
+                                placeholder="E-mail"
+                                aria-label="E-mail"
+                                required
+                            >
+                            <textarea
+                                name="mensagem"
+                                class="sobre-nos-footer__textarea"
+                                placeholder="Mensagem"
+                                aria-label="Mensagem"
+                                rows="4"
+                                required
+                            ></textarea>
+                            <button id="btn-rodape" type="submit" class="sobre-nos-footer__submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="sobre-nos-footer__brand-col">
+                    <div class="sobre-nos-footer__corp">
+                        <p class="sobre-nos-footer__corp-label">Uma Empresa do Grupo</p>
+                        <p class="sobre-nos-footer__corp-name">Prisma Edu Corporation</p>
+                    </div>
+                    <a href="../index.html#inicio" class="sobre-nos-footer__brand-logo" aria-label="Prisma Cursos - Voltar ao início">
+                        <img
+                            src="../assets/images/logo-prisma-simbolo.svg"
+                            alt=""
+                            width="168"
+                            height="64"
+                            class="sobre-nos-footer__brand-symbol"
+                        >
+                        <img
+                            src="../assets/images/logo-prisma-texto.svg"
+                            alt="Prisma Cursos"
+                            width="148"
+                            height="54"
+                            class="sobre-nos-footer__brand-text"
+                        >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/navbar-mobile.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/curso-form.js" defer></script>
+</body>
+</html>
