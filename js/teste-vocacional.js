@@ -45,10 +45,10 @@
         {
           nome: "Desenvolvimento Web Fullstack",
           link: "curso-web-fullstack.html",
-          descricao: "",
+          descricao: "Aprenda a criar sistemas do zero",
           imagem: "../assets/images/curso-web.png",
           fundo: "#9b0a0a",
-          texto: "#ffffff",
+          texto: "#000000",
         },
         {
           nome: "Análise de Dados",
@@ -61,7 +61,7 @@
       ],
       cupom: "PRISMATECH",
       cupomTexto:
-        "Use o cupom “PRISMATECH” para obter 15% de desconto na sua inscrição em um dos cursos de tecnologia da Prisma Cursos.",
+        "Use o cupom “PRISMATECH” para obter 20% de desconto na sua inscrição em um dos cursos de tecnologia da Prisma Cursos.",
       imagem: "../assets/images/resultado-tecnologia.png",
     },
     design: {
@@ -82,7 +82,7 @@
           descricao: "Mergulhe na mente do utilizador",
           imagem: "../assets/images/curso-ux.png",
           fundo: "#cfcf14",
-          texto: "#0a0a0a",
+          texto: "#000000",
         },
         {
           nome: "Design Gráfico e Branding",
@@ -90,12 +90,12 @@
           descricao: "Dê vida a marcas de sucesso",
           imagem: "../assets/images/curso-design-grafico.jpg",
           fundo: "#0c4fb0",
-          texto: "#ffffff",
+          texto: "#000000",
         },
       ],
       cupom: "DESIGNPRISMA",
       cupomTexto:
-        "Use o cupom “DESIGNPRISMA” para obter 15% de desconto na sua inscrição em um dos cursos de design da Prisma Cursos.",
+        "Use o cupom “DESIGNPRISMA” para obter 20% de desconto na sua inscrição em um dos cursos de design da Prisma Cursos.",
       imagem: "../assets/images/resultado-design.png",
     },
     gestao: {
@@ -116,7 +116,7 @@
           descricao: "Tome as rédeas que o mercado precisa",
           imagem: "../assets/images/curso-agil.png",
           fundo: "#16a34a",
-          texto: "#0a0a0a",
+          texto: "#000000",
         },
         {
           nome: "Administração e Negócios",
@@ -124,12 +124,12 @@
           descricao: "Uma base sólida para o mundo corporativo",
           imagem: "../assets/images/curso-administracao.jpg",
           fundo: "#6d3fb0",
-          texto: "#ffffff",
+          texto: "#000000",
         },
       ],
       cupom: "GESTPRISMA",
       cupomTexto:
-        "Use o cupom “GESTPRISMA” para obter 15% de desconto na sua inscrição em um dos cursos de gestão da Prisma Cursos.",
+        "Use o cupom “GESTPRISMA” para obter 20% de desconto na sua inscrição em um dos cursos de gestão da Prisma Cursos.",
       imagem: "../assets/images/resultado-gestao.png",
     },
   };
