@@ -72,6 +72,9 @@
 .curso-badge__header strong {
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-bold);
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 .curso-badge span {
