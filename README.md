@@ -5,7 +5,9 @@ Site institucional responsivo da **Prisma Cursos**, instituto de educação prof
 Projeto desenvolvido para o **Processo Trainee 26.2** da **Orc'estra Gamificação**, a partir do protótipo de alta fidelidade criado no Figma na etapa de concepção.
 
 🔗 **Site publicado:** https://samukasan1518.github.io/prisma-cursos-site-grupo3/
+
 🔗 **Repositório:** https://github.com/DaviSakai/prisma-cursos-site-grupo3
+
 🎨 **Protótipo no Figma:** https://www.figma.com/design/ae4fbRKPPikS58AbWG3lZ0/Prot%C3%B3tipo-de-Alta-Fidelidade---Grupo-3?node-id=0-1&t=yz9fv04XC5S1WN3U-1
 
 ---
@@ -62,19 +64,18 @@ O site conta com um elemento de gamificação posicionado diretamente na página
 
 A organização atual dos diretórios e arquivos do projeto:
 
-* `prisma-cursos-site-grupo3/`
-* `.vscode/`
-* `assets/`
-* `icons/`
-* `images/`
+- `prisma-cursos-site-grupo3/`
+- `.vscode/`
+- `assets/`
+  - `icons/`
+  - `images/`
 
-
-* `css/`
-* `js/`
-* `pages/`
-* `.gitignore`
-* `index.html`
-* `README.md`
+- `css/`
+- `js/`
+- `pages/`
+- `.gitignore`
+- `index.html`
+- `README.md`
 
 
 
